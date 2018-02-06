@@ -1,0 +1,1110 @@
+   1              	 .syntax unified
+   2              	 .cpu cortex-m4
+   3              	 .eabi_attribute 27,3
+   4              	 .fpu fpv4-sp-d16
+   5              	 .eabi_attribute 20,1
+   6              	 .eabi_attribute 21,1
+   7              	 .eabi_attribute 23,3
+   8              	 .eabi_attribute 24,1
+   9              	 .eabi_attribute 25,1
+  10              	 .eabi_attribute 26,1
+  11              	 .eabi_attribute 30,6
+  12              	 .eabi_attribute 34,1
+  13              	 .eabi_attribute 18,4
+  14              	 .thumb
+  15              	 .file "main.c"
+  16              	 .text
+  17              	.Ltext0:
+  18              	 .cfi_sections .debug_frame
+  19              	 .section .text.XMC_GPIO_SetOutputLevel,"ax",%progbits
+  20              	 .align 2
+  21              	 .thumb
+  22              	 .thumb_func
+  24              	XMC_GPIO_SetOutputLevel:
+  25              	.LFB175:
+  26              	 .file 1 "E:/\261\270\267\335\316\304\274\376/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc/xmc_gpio.h"
+   1:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+   2:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @file xmc_gpio.h
+   3:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @date 2015-06-20
+   4:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+   5:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @cond
+   6:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   *************************************************************************************************
+   7:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * XMClib v2.1.6 - XMC Peripheral Driver Library 
+   8:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+   9:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Copyright (c) 2015-2016, Infineon Technologies AG
+  10:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * All rights reserved.                        
+  11:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *                                             
+  12:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
+  13:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * following conditions are met:   
+  14:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *                                                                              
+  15:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Redistributions of source code must retain the above copyright notice, this list of conditions a
+  16:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * disclaimer.                        
+  17:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * 
+  18:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Redistributions in binary form must reproduce the above copyright notice, this list of condition
+  19:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * disclaimer in the documentation and/or other materials provided with the distribution.          
+  20:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * 
+  21:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Neither the name of the copyright holders nor the names of its contributors may be used to endor
+  22:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * products derived from this software without specific prior written permission.                  
+  23:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *                                                                              
+  24:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
+  25:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
+  26:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
+  27:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
+  28:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
+  29:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+  30:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                            
+  31:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *                                                                              
+  32:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
+  33:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Infineon Technologies AG dave@infineon.com).                                                    
+  34:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  **************************************************************************************************
+  35:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  36:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Change History
+  37:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * --------------
+  38:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  39:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * 2015-02-20:
+  40:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *     - Initial draft<br>
+  41:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *     - Documentation improved <br>
+  42:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *      
+  43:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * 2015-06-20:
+  44:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *     - Removed version macros and declaration of GetDriverVersion API
+  45:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  46:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @endcond
+  47:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  48:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+  49:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+  50:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** #ifndef XMC_GPIO_H
+  51:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** #define XMC_GPIO_H
+  52:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+  53:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**************************************************************************************************
+  54:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * HEADER FILES
+  55:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  **************************************************************************************************
+  56:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+  57:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** #include "xmc_common.h"
+  58:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+  59:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+  60:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @addtogroup XMClib XMC Peripheral Library
+  61:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @{
+  62:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+  63:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+  64:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+  65:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @addtogroup GPIO
+  66:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @brief General Purpose Input Output (GPIO) driver for the XMC microcontroller family.
+  67:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  68:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * GPIO driver provide a generic and very flexible software interface for all standard digital I/O 
+  69:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Each port slice has individual interfaces for the operation as General Purpose I/O and it furthe
+  70:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * connectivity to the on-chip periphery and the control for the pad characteristics. 
+  71:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  72:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * The driver is divided into Input and Output mode.
+  73:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  74:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Input mode features:
+  75:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * -# Configuration structure XMC_GPIO_CONFIG_t and initialization function XMC_GPIO_Init()
+  76:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * -# Allows the selection of weak pull-up or pull-down device. Configuration structure XMC_GPIO_MO
+  77:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \if XMC1
+  78:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * -# Allows the selection of input hysteresis. XMC_GPIO_SetInputHysteresis()
+  79:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \endif
+  80:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  81:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * 
+  82:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Output mode features:
+  83:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * -# Allows the selection of push pull/open drain and Alternate output. Configuration structure XM
+  84:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \if XMC4
+  85:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * -# Allows the selection of pad driver strength. Configuration structure XMC_GPIO_OUTPUT_STRENGTH
+  86:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \endif
+  87:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  88:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * -# Allows the selection of initial output level. Configuration structure XMC_GPIO_OUTPUT_LEVEL_t
+  89:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+  90:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *@{
+  91:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+  92:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  
+  93:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**************************************************************************************************
+  94:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * MACROS
+  95:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  **************************************************************************************************
+  96:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+  97:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** #define PORT_IOCR_PC_Pos PORT0_IOCR0_PC0_Pos
+  98:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** #define PORT_IOCR_PC_Msk PORT0_IOCR0_PC0_Msk
+  99:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 100:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** #define PORT_IOCR_PC_Size 				(8U)
+ 101:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 											
+ 102:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 103:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** #define XMC_GPIO_CHECK_OUTPUT_LEVEL(level) ((level == XMC_GPIO_OUTPUT_LEVEL_LOW) || \
+ 104:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****                                             (level == XMC_GPIO_OUTPUT_LEVEL_HIGH))
+ 105:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****                                             
+ 106:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** #define XMC_GPIO_CHECK_HWCTRL(hwctrl) ((hwctrl == XMC_GPIO_HWCTRL_DISABLED) || \
+ 107:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****                                        (hwctrl == XMC_GPIO_HWCTRL_PERIPHERAL1) || \
+ 108:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****                                        (hwctrl == XMC_GPIO_HWCTRL_PERIPHERAL2))                    
+ 109:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****                                             
+ 110:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**************************************************************************************************
+ 111:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * ENUMS
+ 112:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  **************************************************************************************************
+ 113:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 114:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 115:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 116:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Defines output level of a pin. Use type \a XMC_GPIO_OUTPUT_LEVEL_t for this enum.
+ 117:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 118:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** typedef enum XMC_GPIO_OUTPUT_LEVEL
+ 119:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** {
+ 120:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_GPIO_OUTPUT_LEVEL_LOW  = 0x10000U, /**<  Reset bit */
+ 121:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_GPIO_OUTPUT_LEVEL_HIGH = 0x1U, 	/**< Set bit  */
+ 122:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** } XMC_GPIO_OUTPUT_LEVEL_t;
+ 123:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 124:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 125:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Defines direct hardware control characteristics of the pin . Use type \a XMC_GPIO_HWCTRL_t for t
+ 126:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 127:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** typedef enum XMC_GPIO_HWCTRL
+ 128:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** {
+ 129:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_GPIO_HWCTRL_DISABLED     = 0x0U, /**<  Software control only */
+ 130:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_GPIO_HWCTRL_PERIPHERAL1  = 0x1U, /**<  HWI0/HWO0 control path can override the software confi
+ 131:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_GPIO_HWCTRL_PERIPHERAL2  = 0x2U  /**<  HWI1/HWO1 control path can override the software confi
+ 132:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** } XMC_GPIO_HWCTRL_t;
+ 133:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 134:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**************************************************************************************************
+ 135:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * DEVICE FAMILY EXTENSIONS
+ 136:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  **************************************************************************************************
+ 137:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 138:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  #if UC_FAMILY == XMC1
+ 139:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** #include "xmc1_gpio.h"
+ 140:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** #elif UC_FAMILY == XMC4
+ 141:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** #include "xmc4_gpio.h"
+ 142:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** #else
+ 143:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** #error "xmc_gpio.h: family device not supported"
+ 144:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** #endif
+ 145:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 146:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**************************************************************************************************
+ 147:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * API PROTOTYPES
+ 148:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  **************************************************************************************************
+ 149:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 150:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** #ifdef __cplusplus
+ 151:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** extern "C" {
+ 152:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** #endif
+ 153:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 154:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 155:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 156:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  port	  Constant pointer pointing to GPIO port, to access port registers like Pn_OUT,Pn_O
+ 157:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  pin	  Port pin number.
+ 158:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  config GPIO configuration data structure. Refer data structure @ref XMC_GPIO_CONFIG_t fo
+ 159:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 160:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @return None
+ 161:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 162:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Description:</b><br>
+ 163:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \if XMC1
+ 164:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Initializes input / output mode settings like, pull up / pull down devices,hysteresis, push pull
+ 165:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Also configures alternate function outputs and clears hardware port control for a selected \a po
+ 166:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \a config provides selected I/O settings. It configures hardware registers Pn_IOCR,Pn_OUT, Pn_OM
+ 167:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \endif
+ 168:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \if XMC4
+ 169:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Initializes input / output mode settings like, pull up / pull down devices,push pull /open drain
+ 170:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Also configures alternate function outputs and clears hardware port control for selected \a port
+ 171:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * It configures hardware registers Pn_IOCR,Pn_OUT,Pn_OMR,Pn_PDISC and Pn_PDR.\n
+ 172:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \endif
+ 173:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 174:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Related APIs:</b><BR>
+ 175:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *  None
+ 176:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 177:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Note:</b><br>
+ 178:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * This API is called in definition of DAVE_init by code generation and therefore should not be exp
+ 179:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * for the normal operation. Use other APIs only after DAVE_init is called successfully (returns DA
+ 180:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 181:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 182:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 183:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 184:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  
+ 185:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** void XMC_GPIO_Init(XMC_GPIO_PORT_t *const port, const uint8_t pin, const XMC_GPIO_CONFIG_t *const c
+ 186:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  
+ 187:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 188:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 189:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  port	Constant pointer pointing to GPIO port, to access hardware register Pn_IOCR.
+ 190:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  pin	Port pin number.
+ 191:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  mode input / output functionality selection. Refer @ref XMC_GPIO_MODE_t for valid values
+ 192:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 193:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @return None
+ 194:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 195:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Description:</b><br>
+ 196:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Sets digital input and output driver functionality and characteristics of a GPIO port pin. It co
+ 197:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * registers Pn_IOCR. \a mode is initially configured during initialization in XMC_GPIO_Init(). Cal
+ 198:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * the port direction functionality as needed later in the program.
+ 199:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 200:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Related APIs:</b><BR>
+ 201:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *  None
+ 202:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 203:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 204:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 205:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** void XMC_GPIO_SetMode(XMC_GPIO_PORT_t *const port, const uint8_t pin, const XMC_GPIO_MODE_t mode);
+ 206:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 207:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 208:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 209:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 210:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  port	 Constant pointer pointing to GPIO port, to access hardware register Pn_OMR.
+ 211:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  pin	 Port pin number.
+ 212:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  level output level selection. Refer @ref XMC_GPIO_OUTPUT_LEVEL_t for valid values.
+ 213:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 214:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @return None
+ 215:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 216:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Description:</b><br>
+ 217:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Set port pin output level to high or low.It configures hardware registers Pn_OMR.\a level is ini
+ 218:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * configured during initialization in XMC_GPIO_Init(). Call this API to alter output level as need
+ 219:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 220:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Related APIs:</b><BR>
+ 221:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *  XMC_GPIO_SetOutputHigh(), XMC_GPIO_SetOutputLow().
+ 222:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 223:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Note:</b><br>
+ 224:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Prior to this api, user has to configure port pin to output mode using XMC_GPIO_SetMode().
+ 225:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 226:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 227:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 228:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 229:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** __STATIC_INLINE void XMC_GPIO_SetOutputLevel(XMC_GPIO_PORT_t *const port, const uint8_t pin, const 
+ 230:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** {
+  27              	 .loc 1 230 0
+  28              	 .cfi_startproc
+  29              	 
+  30              	 
+  31              	 
+  32 0000 80B4     	 push {r7}
+  33              	.LCFI0:
+  34              	 .cfi_def_cfa_offset 4
+  35              	 .cfi_offset 7,-4
+  36 0002 85B0     	 sub sp,sp,#20
+  37              	.LCFI1:
+  38              	 .cfi_def_cfa_offset 24
+  39 0004 00AF     	 add r7,sp,#0
+  40              	.LCFI2:
+  41              	 .cfi_def_cfa_register 7
+  42 0006 F860     	 str r0,[r7,#12]
+  43 0008 0B46     	 mov r3,r1
+  44 000a 7A60     	 str r2,[r7,#4]
+  45 000c FB72     	 strb r3,[r7,#11]
+ 231:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_ASSERT("XMC_GPIO_SetOutputLevel: Invalid port", XMC_GPIO_CHECK_OUTPUT_PORT(port));
+ 232:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_ASSERT("XMC_GPIO_SetOutputLevel: Invalid output level", XMC_GPIO_CHECK_OUTPUT_LEVEL(level));
+ 233:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   
+ 234:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   port->OMR = (uint32_t)level << pin;
+  46              	 .loc 1 234 0
+  47 000e FB7A     	 ldrb r3,[r7,#11]
+  48 0010 7A68     	 ldr r2,[r7,#4]
+  49 0012 9A40     	 lsls r2,r2,r3
+  50 0014 FB68     	 ldr r3,[r7,#12]
+  51 0016 5A60     	 str r2,[r3,#4]
+ 235:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** }
+  52              	 .loc 1 235 0
+  53 0018 1437     	 adds r7,r7,#20
+  54              	.LCFI3:
+  55              	 .cfi_def_cfa_offset 4
+  56 001a BD46     	 mov sp,r7
+  57              	.LCFI4:
+  58              	 .cfi_def_cfa_register 13
+  59              	 
+  60 001c 5DF8047B 	 ldr r7,[sp],#4
+  61              	.LCFI5:
+  62              	 .cfi_restore 7
+  63              	 .cfi_def_cfa_offset 0
+  64 0020 7047     	 bx lr
+  65              	 .cfi_endproc
+  66              	.LFE175:
+  68 0022 00BF     	 .section .text.XMC_GPIO_SetOutputHigh,"ax",%progbits
+  69              	 .align 2
+  70              	 .thumb
+  71              	 .thumb_func
+  73              	XMC_GPIO_SetOutputHigh:
+  74              	.LFB176:
+ 236:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 237:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 238:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 239:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  port constant pointer pointing to GPIO port, to access hardware register Pn_OMR.
+ 240:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  pin	Port pin number.
+ 241:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 242:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @return None
+ 243:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 244:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Description:</b><br>
+ 245:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *  Sets port pin output to high. It configures hardware registers Pn_OMR.
+ 246:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 247:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *  \par<b>Related APIs:</b><BR>
+ 248:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *  XMC_GPIO_SetOutputLow()
+ 249:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 250:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Note:</b><br>
+ 251:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Prior to this api, user has to configure port pin to output mode using XMC_GPIO_SetMode().\n
+ 252:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Register Pn_OMR is virtual and does not contain any flip-flop. A read action delivers the value 
+ 253:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 254:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 255:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 256:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** __STATIC_INLINE void XMC_GPIO_SetOutputHigh(XMC_GPIO_PORT_t *const port, const uint8_t pin)
+ 257:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** {
+  75              	 .loc 1 257 0
+  76              	 .cfi_startproc
+  77              	 
+  78              	 
+  79              	 
+  80 0000 80B4     	 push {r7}
+  81              	.LCFI6:
+  82              	 .cfi_def_cfa_offset 4
+  83              	 .cfi_offset 7,-4
+  84 0002 83B0     	 sub sp,sp,#12
+  85              	.LCFI7:
+  86              	 .cfi_def_cfa_offset 16
+  87 0004 00AF     	 add r7,sp,#0
+  88              	.LCFI8:
+  89              	 .cfi_def_cfa_register 7
+  90 0006 7860     	 str r0,[r7,#4]
+  91 0008 0B46     	 mov r3,r1
+  92 000a FB70     	 strb r3,[r7,#3]
+ 258:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_ASSERT("XMC_GPIO_SetOutputHigh: Invalid port", XMC_GPIO_CHECK_OUTPUT_PORT(port));
+ 259:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 260:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   port->OMR = (uint32_t)0x1U << pin;
+  93              	 .loc 1 260 0
+  94 000c FB78     	 ldrb r3,[r7,#3]
+  95 000e 0122     	 movs r2,#1
+  96 0010 9A40     	 lsls r2,r2,r3
+  97 0012 7B68     	 ldr r3,[r7,#4]
+  98 0014 5A60     	 str r2,[r3,#4]
+ 261:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** }
+  99              	 .loc 1 261 0
+ 100 0016 0C37     	 adds r7,r7,#12
+ 101              	.LCFI9:
+ 102              	 .cfi_def_cfa_offset 4
+ 103 0018 BD46     	 mov sp,r7
+ 104              	.LCFI10:
+ 105              	 .cfi_def_cfa_register 13
+ 106              	 
+ 107 001a 5DF8047B 	 ldr r7,[sp],#4
+ 108              	.LCFI11:
+ 109              	 .cfi_restore 7
+ 110              	 .cfi_def_cfa_offset 0
+ 111 001e 7047     	 bx lr
+ 112              	 .cfi_endproc
+ 113              	.LFE176:
+ 115              	 .section .text.XMC_GPIO_GetInput,"ax",%progbits
+ 116              	 .align 2
+ 117              	 .thumb
+ 118              	 .thumb_func
+ 120              	XMC_GPIO_GetInput:
+ 121              	.LFB179:
+ 262:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 263:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 264:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 265:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  port	constant pointer pointing to GPIO port, to access hardware register Pn_OMR.
+ 266:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param  pin	port pin number.
+ 267:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 268:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @return  None
+ 269:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 270:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *\par<b>Description:</b><br>
+ 271:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Sets port pin output to low. It configures hardware registers Pn_OMR.\n
+ 272:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 273:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Related APIs:</b><BR>>
+ 274:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * XMC_GPIO_SetOutputHigh()
+ 275:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 276:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *\par<b>Note:</b><br>
+ 277:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Prior to this api, user has to configure port pin to output mode using XMC_GPIO_SetMode().
+ 278:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Register Pn_OMR is virtual and does not contain any flip-flop. A read action delivers the value 
+ 279:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 280:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 281:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 282:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** __STATIC_INLINE void XMC_GPIO_SetOutputLow(XMC_GPIO_PORT_t *const port, const uint8_t pin)
+ 283:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** {
+ 284:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_ASSERT("XMC_GPIO_SetOutputLow: Invalid port", XMC_GPIO_CHECK_OUTPUT_PORT(port));
+ 285:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 286:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   port->OMR = 0x10000U << pin;
+ 287:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** }
+ 288:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 289:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 290:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 291:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param port constant pointer pointing to GPIO port, to access hardware register Pn_OMR.
+ 292:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param pin  port pin number.
+ 293:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 294:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @return None
+ 295:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 296:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Description:</b><br>
+ 297:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Configures port pin output to Toggle. It configures hardware registers Pn_OMR.
+ 298:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 299:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Related APIs:</b><BR>
+ 300:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * XMC_GPIO_SetOutputHigh(), XMC_GPIO_SetOutputLow().
+ 301:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 302:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Note:</b><br>
+ 303:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Prior to this api, user has to configure port pin to output mode using XMC_GPIO_SetMode(). Regis
+ 304:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * and does not contain any flip-flop. A read action delivers the value of 0.
+ 305:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 306:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 307:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 308:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** __STATIC_INLINE void XMC_GPIO_ToggleOutput(XMC_GPIO_PORT_t *const port, const uint8_t pin)
+ 309:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** {
+ 310:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_ASSERT("XMC_GPIO_ToggleOutput: Invalid port", XMC_GPIO_CHECK_OUTPUT_PORT(port));
+ 311:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 312:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   port->OMR = 0x10001U << pin;
+ 313:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** }
+ 314:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 315:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 316:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 317:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param port constant pointer pointing to GPIO port, to access hardware register Pn_IN.
+ 318:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param pin  Port pin number.
+ 319:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 320:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @return uint32_t pin logic level status.
+ 321:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 322:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *\par<b>Description:</b><br>
+ 323:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Reads the Pn_IN register and returns the current logical value at the GPIO pin.
+ 324:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 325:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Related APIs:</b><BR>
+ 326:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * None
+ 327:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 328:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Note:</b><br>
+ 329:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Prior to this api, user has to configure port pin to input mode using XMC_GPIO_SetMode().
+ 330:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 331:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 332:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 333:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** __STATIC_INLINE uint32_t XMC_GPIO_GetInput(XMC_GPIO_PORT_t *const port, const uint8_t pin)
+ 334:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** {
+ 122              	 .loc 1 334 0
+ 123              	 .cfi_startproc
+ 124              	 
+ 125              	 
+ 126              	 
+ 127 0000 80B4     	 push {r7}
+ 128              	.LCFI12:
+ 129              	 .cfi_def_cfa_offset 4
+ 130              	 .cfi_offset 7,-4
+ 131 0002 83B0     	 sub sp,sp,#12
+ 132              	.LCFI13:
+ 133              	 .cfi_def_cfa_offset 16
+ 134 0004 00AF     	 add r7,sp,#0
+ 135              	.LCFI14:
+ 136              	 .cfi_def_cfa_register 7
+ 137 0006 7860     	 str r0,[r7,#4]
+ 138 0008 0B46     	 mov r3,r1
+ 139 000a FB70     	 strb r3,[r7,#3]
+ 335:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_ASSERT("XMC_GPIO_GetInput: Invalid port", XMC_GPIO_CHECK_PORT(port));
+ 336:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 337:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   return (((port->IN) >> pin) & 0x1U);
+ 140              	 .loc 1 337 0
+ 141 000c 7B68     	 ldr r3,[r7,#4]
+ 142 000e 5A6A     	 ldr r2,[r3,#36]
+ 143 0010 FB78     	 ldrb r3,[r7,#3]
+ 144 0012 22FA03F3 	 lsr r3,r2,r3
+ 145 0016 03F00103 	 and r3,r3,#1
+ 338:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** }
+ 146              	 .loc 1 338 0
+ 147 001a 1846     	 mov r0,r3
+ 148 001c 0C37     	 adds r7,r7,#12
+ 149              	.LCFI15:
+ 150              	 .cfi_def_cfa_offset 4
+ 151 001e BD46     	 mov sp,r7
+ 152              	.LCFI16:
+ 153              	 .cfi_def_cfa_register 13
+ 154              	 
+ 155 0020 5DF8047B 	 ldr r7,[sp],#4
+ 156              	.LCFI17:
+ 157              	 .cfi_restore 7
+ 158              	 .cfi_def_cfa_offset 0
+ 159 0024 7047     	 bx lr
+ 160              	 .cfi_endproc
+ 161              	.LFE179:
+ 163 0026 00BF     	 .section .text.XMC_GPIO_EnableDigitalInput,"ax",%progbits
+ 164              	 .align 2
+ 165              	 .thumb
+ 166              	 .thumb_func
+ 168              	XMC_GPIO_EnableDigitalInput:
+ 169              	.LFB182:
+ 339:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 340:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 341:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param port constant pointer pointing to GPIO port, to access hardware register Pn_PPS.
+ 342:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param pin  port pin number.
+ 343:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 344:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @return None
+ 345:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 346:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Description:</b><br>
+ 347:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Enables pin power save mode and configures Pn_PPS register.This configuration is useful when the
+ 348:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Deep Sleep mode.Port pin enabled with power save mode option are set to a defined state and the 
+ 349:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * as well as the output driver stage are switched off. By default port pin does not react to power
+ 350:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 351:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Related APIs:</b><BR>
+ 352:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * XMC_GPIO_DisablePowerSaveMode()
+ 353:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 354:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * <b>Note:</b><br>
+ 355:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Do not enable the Pin Power Save function for pins configured for Hardware Control (Pn_HWSEL.HWx
+ 356:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * may result in an undefined behavior of the pin when the device enters the Deep Sleep state.
+ 357:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 358:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 359:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 360:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 361:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** __STATIC_INLINE void XMC_GPIO_EnablePowerSaveMode(XMC_GPIO_PORT_t *const port, const uint8_t pin)
+ 362:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** {
+ 363:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_ASSERT("XMC_GPIO_EnablePowerSaveMode: Invalid port", XMC_GPIO_CHECK_PORT(port));
+ 364:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 365:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   port->PPS |= (uint32_t)0x1U << pin;
+ 366:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** }
+ 367:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 368:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 369:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 370:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 371:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param port	constant pointer pointing to GPIO port, to access hardware register Pn_PPS.
+ 372:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param pin	port pin number.
+ 373:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 374:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @return None
+ 375:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 376:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Description:</b><br>
+ 377:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Disables pin power save mode and configures Pn_PPS register.This configuration is useful when th
+ 378:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Deep Sleep mode. This configuration enables input Schmitt-Trigger and output driver stage(if pin
+ 379:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * save mode previously). By default port \a pin does not react to power save mode request.
+ 380:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 381:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Related APIs:</b><BR>
+ 382:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *  XMC_GPIO_EnablePowerSaveMode()
+ 383:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 384:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *\par<b>Note:</b><br>
+ 385:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Do not enable the Pin Power Save function for pins configured for Hardware Control (Pn_HWSEL.HWx
+ 386:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * may result in an undefined behavior of the pin when the device enters the Deep Sleep state.
+ 387:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 388:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 389:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 390:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** __STATIC_INLINE void XMC_GPIO_DisablePowerSaveMode(XMC_GPIO_PORT_t *const port, const uint8_t pin)
+ 391:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** {
+ 392:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_ASSERT("XMC_GPIO_DisablePowerSaveMode: Invalid port", XMC_GPIO_CHECK_PORT(port));
+ 393:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 394:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   port->PPS &= ~(uint32_t)((uint32_t)0x1U << pin);
+ 395:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** }
+ 396:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 397:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 398:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 399:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param port	 constant pointer pointing to GPIO port, to access hardware register Pn_HWSEL.
+ 400:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param pin	 port pin number.
+ 401:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param hwctrl direct hardware control selection. Refer @ref XMC_GPIO_HWCTRL_t for valid values.
+ 402:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 403:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @return None
+ 404:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 405:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Description:</b><br>
+ 406:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Selects direct hard ware control and configures Pn_HWSEL register.This configuration is useful f
+ 407:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * overlaid with peripheral functions for which the connected peripheral needs hardware control.
+ 408:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 409:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Related APIs:</b><BR>
+ 410:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *  None
+ 411:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 412:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *\par<b>Note:</b><br>
+ 413:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Do not enable the Pin Power Save function for pins configured for Hardware Control (Pn_HWSEL.HWx
+ 414:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Doing so may result in an undefined behavior of the pin when the device enters the Deep Sleep st
+ 415:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 416:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 417:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 418:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** void XMC_GPIO_SetHardwareControl(XMC_GPIO_PORT_t *const port, const uint8_t pin, const XMC_GPIO_HWC
+ 419:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 420:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** 
+ 421:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** /**
+ 422:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param port	constant pointer pointing to GPIO port, to access hardware register Pn_PDISC.
+ 423:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @param pin	port pin number.
+ 424:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 425:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * @return None
+ 426:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 427:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Related APIs:</b><BR>
+ 428:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *  None
+ 429:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 430:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * \par<b>Description:</b><br>
+ 431:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * Enable digital input path for analog pins and configures Pn_PDISC register.This configuration is
+ 432:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  * analog port pins.
+ 433:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  *
+ 434:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****  */
+ 435:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** __STATIC_INLINE void XMC_GPIO_EnableDigitalInput(XMC_GPIO_PORT_t *const port, const uint8_t pin)
+ 436:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** {
+ 170              	 .loc 1 436 0
+ 171              	 .cfi_startproc
+ 172              	 
+ 173              	 
+ 174              	 
+ 175 0000 80B4     	 push {r7}
+ 176              	.LCFI18:
+ 177              	 .cfi_def_cfa_offset 4
+ 178              	 .cfi_offset 7,-4
+ 179 0002 83B0     	 sub sp,sp,#12
+ 180              	.LCFI19:
+ 181              	 .cfi_def_cfa_offset 16
+ 182 0004 00AF     	 add r7,sp,#0
+ 183              	.LCFI20:
+ 184              	 .cfi_def_cfa_register 7
+ 185 0006 7860     	 str r0,[r7,#4]
+ 186 0008 0B46     	 mov r3,r1
+ 187 000a FB70     	 strb r3,[r7,#3]
+ 437:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   XMC_ASSERT("XMC_GPIO_EnableDigitalInput: Invalid analog port", XMC_GPIO_CHECK_ANALOG_PORT(port));
+ 438:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   
+ 439:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h ****   port->PDISC &= ~(uint32_t)((uint32_t)0x1U << pin);
+ 188              	 .loc 1 439 0
+ 189 000c 7B68     	 ldr r3,[r7,#4]
+ 190 000e 1A6E     	 ldr r2,[r3,#96]
+ 191 0010 FB78     	 ldrb r3,[r7,#3]
+ 192 0012 0121     	 movs r1,#1
+ 193 0014 01FA03F3 	 lsl r3,r1,r3
+ 194 0018 DB43     	 mvns r3,r3
+ 195 001a 1A40     	 ands r2,r2,r3
+ 196 001c 7B68     	 ldr r3,[r7,#4]
+ 197 001e 1A66     	 str r2,[r3,#96]
+ 440:E:/备份文件/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc\xmc_gpio.h **** }
+ 198              	 .loc 1 440 0
+ 199 0020 0C37     	 adds r7,r7,#12
+ 200              	.LCFI21:
+ 201              	 .cfi_def_cfa_offset 4
+ 202 0022 BD46     	 mov sp,r7
+ 203              	.LCFI22:
+ 204              	 .cfi_def_cfa_register 13
+ 205              	 
+ 206 0024 5DF8047B 	 ldr r7,[sp],#4
+ 207              	.LCFI23:
+ 208              	 .cfi_restore 7
+ 209              	 .cfi_def_cfa_offset 0
+ 210 0028 7047     	 bx lr
+ 211              	 .cfi_endproc
+ 212              	.LFE182:
+ 214 002a 00BF     	 .section .text.Init_ECAT_Adapt_LED,"ax",%progbits
+ 215              	 .align 2
+ 216              	 .global Init_ECAT_Adapt_LED
+ 217              	 .thumb
+ 218              	 .thumb_func
+ 220              	Init_ECAT_Adapt_LED:
+ 221              	.LFB274:
+ 222              	 .file 2 "../main.c"
+   1:../main.c     **** /*
+   2:../main.c     ****  * Copyright (C) 2015 Infineon Technologies AG. All rights reserved.
+   3:../main.c     ****  *
+   4:../main.c     ****  * Infineon Technologies AG (Infineon) is supplying this software for use with
+   5:../main.c     ****  * Infineon's microcontrollers.
+   6:../main.c     ****  * This file can be freely distributed within development tools that are
+   7:../main.c     ****  * supporting such microcontrollers.
+   8:../main.c     ****  *
+   9:../main.c     ****  * THIS SOFTWARE IS PROVIDED "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED
+  10:../main.c     ****  * OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF
+  11:../main.c     ****  * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE APPLY TO THIS SOFTWARE.
+  12:../main.c     ****  * INFINEON SHALL NOT, IN ANY CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL,
+  13:../main.c     ****  * OR CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER.
+  14:../main.c     ****  *
+  15:../main.c     ****  * ATTENTION:
+  16:../main.c     ****  * This example demonstrates the ethercat peripheral of XMC 4800. For this purpose an
+  17:../main.c     ****  * ethercat slave node implemented inside a library is included into this project.
+  18:../main.c     ****  * This library is for demonstration purpose within this example only and is
+  19:../main.c     ****  * not certified, not safe and not meant to be used in any other context than here.
+  20:../main.c     ****  *
+  21:../main.c     ****  */
+  22:../main.c     **** 
+  23:../main.c     **** 
+  24:../main.c     **** /**
+  25:../main.c     ****  * @file
+  26:../main.c     ****  * @date 2 Dec, 2015
+  27:../main.c     ****  * @version 1.0.0
+  28:../main.c     ****  *
+  29:../main.c     ****  * @brief XMC4800 Relax Kit EtherCat demo example
+  30:../main.c     ****  *
+  31:../main.c     ****  * This example initializes a generic slave node and makes only sense to be evaluated with a etherc
+  32:../main.c     ****  * The generic slave implements 8x1bit and 4x16bit on input-side and
+  33:../main.c     ****  * 8x1bit and 4x16bit on output-side.
+  34:../main.c     ****  *
+  35:../main.c     ****  * Button1 (P15.13) and Button2 (P15.12) on your XMC4800 Relax EtherCAT Kit can be used to control 
+  36:../main.c     ****  * master input (IN_GENERIC->IN_GEN_Bit1/2).
+  37:../main.c     ****  *
+  38:../main.c     ****  * On master output side 8x1bit (OUT_GENERIC->OUT_GEN_Bit1-8) are used to control the state of 8 LE
+  39:../main.c     ****  * XMC4800 Relax EtherCAT Kit. Furthermore a 16bit integer (OUT_GENERIC->OUT_GEN_INT1) is used to d
+  40:../main.c     ****  * your base board via PWM.
+  41:../main.c     ****  *
+  42:../main.c     ****  * ATTENTION:
+  43:../main.c     ****  * This example demonstrates the ethercat peripheral of XMC 4800. For this purpose an
+  44:../main.c     ****  * ethercat slave node implementation inside the library libEthCatGenSlv.a is included into this pr
+  45:../main.c     ****  * This library is for demonstration purpose within this example only
+  46:../main.c     ****  * and is not certified, not conform and not planned to be used in any other context than this
+  47:../main.c     ****  * example here.
+  48:../main.c     ****  * For your final product you have to use a slave stack which is prepared for getting certified.
+  49:../main.c     ****  * On the market such solutions are available.
+  50:../main.c     ****  * Further information on development systems and tools you find here:
+  51:../main.c     ****  * https://www.ethercat.org/en/products.html
+  52:../main.c     ****  * History <br>
+  53:../main.c     ****  *
+  54:../main.c     ****  * Version 1.0.0 Initial <br>
+  55:../main.c     ****  *
+  56:../main.c     ****  */
+  57:../main.c     **** 
+  58:../main.c     **** #include <DAVE.h>               //Declarations from DAVE Code Generation (includes SFR declaration)
+  59:../main.c     **** #include "SSC/Src/XMC_ESCObjects.h"
+  60:../main.c     **** 
+  61:../main.c     **** #define P_LED1 P4_0
+  62:../main.c     **** #define P_LED2 P4_1
+  63:../main.c     **** 
+  64:../main.c     **** #define MAP2LEVEL(x) ((x==0)?XMC_GPIO_OUTPUT_LEVEL_LOW:XMC_GPIO_OUTPUT_LEVEL_HIGH)
+  65:../main.c     **** 
+  66:../main.c     **** void Init_ECAT_Adapt_LED ()
+  67:../main.c     **** {
+ 223              	 .loc 2 67 0
+ 224              	 .cfi_startproc
+ 225              	 
+ 226              	 
+ 227 0000 80B5     	 push {r7,lr}
+ 228              	.LCFI24:
+ 229              	 .cfi_def_cfa_offset 8
+ 230              	 .cfi_offset 7,-8
+ 231              	 .cfi_offset 14,-4
+ 232 0002 00AF     	 add r7,sp,#0
+ 233              	.LCFI25:
+ 234              	 .cfi_def_cfa_register 7
+  68:../main.c     ****   /* Set mode of all LED ports to push-pull and output level to low*/
+  69:../main.c     ****   XMC_GPIO_SetMode(P_LED1, XMC_GPIO_MODE_OUTPUT_PUSH_PULL);
+ 235              	 .loc 2 69 0
+ 236 0004 0948     	 ldr r0,.L7
+ 237 0006 0021     	 movs r1,#0
+ 238 0008 8022     	 movs r2,#128
+ 239 000a FFF7FEFF 	 bl XMC_GPIO_SetMode
+  70:../main.c     ****   XMC_GPIO_SetOutputHigh(P_LED1);
+ 240              	 .loc 2 70 0
+ 241 000e 0748     	 ldr r0,.L7
+ 242 0010 0021     	 movs r1,#0
+ 243 0012 FFF7FEFF 	 bl XMC_GPIO_SetOutputHigh
+  71:../main.c     ****   XMC_GPIO_SetMode(P_LED2, XMC_GPIO_MODE_OUTPUT_PUSH_PULL);
+ 244              	 .loc 2 71 0
+ 245 0016 0548     	 ldr r0,.L7
+ 246 0018 0121     	 movs r1,#1
+ 247 001a 8022     	 movs r2,#128
+ 248 001c FFF7FEFF 	 bl XMC_GPIO_SetMode
+  72:../main.c     ****   XMC_GPIO_SetOutputHigh(P_LED2);
+ 249              	 .loc 2 72 0
+ 250 0020 0248     	 ldr r0,.L7
+ 251 0022 0121     	 movs r1,#1
+ 252 0024 FFF7FEFF 	 bl XMC_GPIO_SetOutputHigh
+  73:../main.c     **** }
+ 253              	 .loc 2 73 0
+ 254 0028 80BD     	 pop {r7,pc}
+ 255              	.L8:
+ 256 002a 00BF     	 .align 2
+ 257              	.L7:
+ 258 002c 00840248 	 .word 1208124416
+ 259              	 .cfi_endproc
+ 260              	.LFE274:
+ 262              	 .section .text.Init_Relax_Button,"ax",%progbits
+ 263              	 .align 2
+ 264              	 .global Init_Relax_Button
+ 265              	 .thumb
+ 266              	 .thumb_func
+ 268              	Init_Relax_Button:
+ 269              	.LFB275:
+  74:../main.c     **** 
+  75:../main.c     **** void Init_Relax_Button ()
+  76:../main.c     **** {
+ 270              	 .loc 2 76 0
+ 271              	 .cfi_startproc
+ 272              	 
+ 273              	 
+ 274 0000 80B5     	 push {r7,lr}
+ 275              	.LCFI26:
+ 276              	 .cfi_def_cfa_offset 8
+ 277              	 .cfi_offset 7,-8
+ 278              	 .cfi_offset 14,-4
+ 279 0002 00AF     	 add r7,sp,#0
+ 280              	.LCFI27:
+ 281              	 .cfi_def_cfa_register 7
+  77:../main.c     ****   /* INITIALIZE BUTTON1 ON PORT 3.4 FOR INPUT */
+  78:../main.c     ****   /* Set mode to input tristate */
+  79:../main.c     ****   XMC_GPIO_SetMode(P3_4, XMC_GPIO_MODE_INPUT_TRISTATE);
+ 282              	 .loc 2 79 0
+ 283 0004 0448     	 ldr r0,.L10
+ 284 0006 0421     	 movs r1,#4
+ 285 0008 0022     	 movs r2,#0
+ 286 000a FFF7FEFF 	 bl XMC_GPIO_SetMode
+  80:../main.c     ****   /* Enable digital input. Only needed because P15.13 is an analog port */
+  81:../main.c     ****   XMC_GPIO_EnableDigitalInput(P3_4);
+ 287              	 .loc 2 81 0
+ 288 000e 0248     	 ldr r0,.L10
+ 289 0010 0421     	 movs r1,#4
+ 290 0012 FFF7FEFF 	 bl XMC_GPIO_EnableDigitalInput
+  82:../main.c     **** }
+ 291              	 .loc 2 82 0
+ 292 0016 80BD     	 pop {r7,pc}
+ 293              	.L11:
+ 294              	 .align 2
+ 295              	.L10:
+ 296 0018 00830248 	 .word 1208124160
+ 297              	 .cfi_endproc
+ 298              	.LFE275:
+ 300              	 .section .text.process_app,"ax",%progbits
+ 301              	 .align 2
+ 302              	 .global process_app
+ 303              	 .thumb
+ 304              	 .thumb_func
+ 306              	process_app:
+ 307              	.LFB276:
+  83:../main.c     **** 
+  84:../main.c     **** void process_app(TOBJ7000 *OUT_GENERIC, TOBJ6000 *IN_GENERIC)
+  85:../main.c     **** {
+ 308              	 .loc 2 85 0
+ 309              	 .cfi_startproc
+ 310              	 
+ 311              	 
+ 312 0000 80B5     	 push {r7,lr}
+ 313              	.LCFI28:
+ 314              	 .cfi_def_cfa_offset 8
+ 315              	 .cfi_offset 7,-8
+ 316              	 .cfi_offset 14,-4
+ 317 0002 82B0     	 sub sp,sp,#8
+ 318              	.LCFI29:
+ 319              	 .cfi_def_cfa_offset 16
+ 320 0004 00AF     	 add r7,sp,#0
+ 321              	.LCFI30:
+ 322              	 .cfi_def_cfa_register 7
+ 323 0006 7860     	 str r0,[r7,#4]
+ 324 0008 3960     	 str r1,[r7]
+  86:../main.c     ****   /* OUTPUT PROCESSING */
+  87:../main.c     ****   /* Check bitfield set by master OUT_GEN_Bit1..8 and set LEDs accordingly */
+  88:../main.c     ****   XMC_GPIO_SetOutputLevel(P_LED1, MAP2LEVEL(OUT_GENERIC->OUT_GEN_Bit1));
+ 325              	 .loc 2 88 0
+ 326 000a 7B68     	 ldr r3,[r7,#4]
+ 327 000c 9B7A     	 ldrb r3,[r3,#10]
+ 328 000e 03F00103 	 and r3,r3,#1
+ 329 0012 DBB2     	 uxtb r3,r3
+ 330 0014 002B     	 cmp r3,#0
+ 331 0016 02D1     	 bne .L13
+ 332              	 .loc 2 88 0 is_stmt 0 discriminator 1
+ 333 0018 4FF48033 	 mov r3,#65536
+ 334 001c 00E0     	 b .L14
+ 335              	.L13:
+ 336              	 .loc 2 88 0 discriminator 2
+ 337 001e 0123     	 movs r3,#1
+ 338              	.L14:
+ 339              	 .loc 2 88 0 discriminator 4
+ 340 0020 1448     	 ldr r0,.L19
+ 341 0022 0021     	 movs r1,#0
+ 342 0024 1A46     	 mov r2,r3
+ 343 0026 FFF7FEFF 	 bl XMC_GPIO_SetOutputLevel
+  89:../main.c     ****   XMC_GPIO_SetOutputLevel(P_LED2, MAP2LEVEL(OUT_GENERIC->OUT_GEN_Bit2));
+ 344              	 .loc 2 89 0 is_stmt 1 discriminator 4
+ 345 002a 7B68     	 ldr r3,[r7,#4]
+ 346 002c 9B7A     	 ldrb r3,[r3,#10]
+ 347 002e 03F00203 	 and r3,r3,#2
+ 348 0032 DBB2     	 uxtb r3,r3
+ 349 0034 002B     	 cmp r3,#0
+ 350 0036 02D1     	 bne .L15
+ 351              	 .loc 2 89 0 is_stmt 0 discriminator 1
+ 352 0038 4FF48033 	 mov r3,#65536
+ 353 003c 00E0     	 b .L16
+ 354              	.L15:
+ 355              	 .loc 2 89 0 discriminator 2
+ 356 003e 0123     	 movs r3,#1
+ 357              	.L16:
+ 358              	 .loc 2 89 0 discriminator 4
+ 359 0040 0C48     	 ldr r0,.L19
+ 360 0042 0121     	 movs r1,#1
+ 361 0044 1A46     	 mov r2,r3
+ 362 0046 FFF7FEFF 	 bl XMC_GPIO_SetOutputLevel
+  90:../main.c     **** 
+  91:../main.c     ****   /* INPUT PROCESSING */
+  92:../main.c     ****   /*Check Button 1 and set IN_GEN_Bit1 which is sent to master accordingly*/
+  93:../main.c     ****   if (XMC_GPIO_GetInput(P3_4))
+ 363              	 .loc 2 93 0 is_stmt 1 discriminator 4
+ 364 004a 0B48     	 ldr r0,.L19+4
+ 365 004c 0421     	 movs r1,#4
+ 366 004e FFF7FEFF 	 bl XMC_GPIO_GetInput
+ 367 0052 0346     	 mov r3,r0
+ 368 0054 002B     	 cmp r3,#0
+ 369 0056 05D0     	 beq .L17
+  94:../main.c     ****     IN_GENERIC->IN_GEN_Bit1 = 1;
+ 370              	 .loc 2 94 0
+ 371 0058 3A68     	 ldr r2,[r7]
+ 372 005a 937A     	 ldrb r3,[r2,#10]
+ 373 005c 43F00103 	 orr r3,r3,#1
+ 374 0060 9372     	 strb r3,[r2,#10]
+ 375 0062 04E0     	 b .L12
+ 376              	.L17:
+  95:../main.c     ****   else
+  96:../main.c     ****     IN_GENERIC->IN_GEN_Bit1 = 0;
+ 377              	 .loc 2 96 0
+ 378 0064 3A68     	 ldr r2,[r7]
+ 379 0066 937A     	 ldrb r3,[r2,#10]
+ 380 0068 6FF30003 	 bfc r3,#0,#1
+ 381 006c 9372     	 strb r3,[r2,#10]
+ 382              	.L12:
+  97:../main.c     **** }
+ 383              	 .loc 2 97 0
+ 384 006e 0837     	 adds r7,r7,#8
+ 385              	.LCFI31:
+ 386              	 .cfi_def_cfa_offset 8
+ 387 0070 BD46     	 mov sp,r7
+ 388              	.LCFI32:
+ 389              	 .cfi_def_cfa_register 13
+ 390              	 
+ 391 0072 80BD     	 pop {r7,pc}
+ 392              	.L20:
+ 393              	 .align 2
+ 394              	.L19:
+ 395 0074 00840248 	 .word 1208124416
+ 396 0078 00830248 	 .word 1208124160
+ 397              	 .cfi_endproc
+ 398              	.LFE276:
+ 400              	 .section .text.main,"ax",%progbits
+ 401              	 .align 2
+ 402              	 .global main
+ 403              	 .thumb
+ 404              	 .thumb_func
+ 406              	main:
+ 407              	.LFB277:
+  98:../main.c     **** 
+  99:../main.c     **** int main(void)
+ 100:../main.c     **** {
+ 408              	 .loc 2 100 0
+ 409              	 .cfi_startproc
+ 410              	 
+ 411              	 
+ 412 0000 80B5     	 push {r7,lr}
+ 413              	.LCFI33:
+ 414              	 .cfi_def_cfa_offset 8
+ 415              	 .cfi_offset 7,-8
+ 416              	 .cfi_offset 14,-4
+ 417 0002 82B0     	 sub sp,sp,#8
+ 418              	.LCFI34:
+ 419              	 .cfi_def_cfa_offset 16
+ 420 0004 00AF     	 add r7,sp,#0
+ 421              	.LCFI35:
+ 422              	 .cfi_def_cfa_register 7
+ 101:../main.c     ****   DAVE_STATUS_t status;
+ 102:../main.c     ****   uint32_t timer=0;
+ 423              	 .loc 2 102 0
+ 424 0006 0023     	 movs r3,#0
+ 425 0008 7B60     	 str r3,[r7,#4]
+ 103:../main.c     ****   status = DAVE_Init();                     /* Initialization of DAVE APPs  */
+ 426              	 .loc 2 103 0
+ 427 000a FFF7FEFF 	 bl DAVE_Init
+ 428 000e 0346     	 mov r3,r0
+ 429 0010 FB70     	 strb r3,[r7,#3]
+ 104:../main.c     **** 
+ 105:../main.c     ****   Init_ECAT_Adapt_LED ();                   /* Initialize the ports which drive LEDs on EtherCat sh
+ 430              	 .loc 2 105 0
+ 431 0012 FFF7FEFF 	 bl Init_ECAT_Adapt_LED
+ 106:../main.c     ****   Init_Relax_Button();                      /* Initialize buttons on XMC4800 */
+ 432              	 .loc 2 106 0
+ 433 0016 FFF7FEFF 	 bl Init_Relax_Button
+ 107:../main.c     **** 
+ 108:../main.c     ****   if(status == DAVE_STATUS_FAILURE)
+ 434              	 .loc 2 108 0
+ 435 001a FB78     	 ldrb r3,[r7,#3]
+ 436 001c 012B     	 cmp r3,#1
+ 437 001e 00D1     	 bne .L22
+ 438              	.L23:
+ 109:../main.c     ****   {
+ 110:../main.c     ****     /* Placeholder for error handler code. The while loop below can be replaced with an user error 
+ 111:../main.c     ****     XMC_DEBUG("DAVE APPs initialization failed\n");
+ 112:../main.c     ****     while(1U)
+ 113:../main.c     ****     {
+ 114:../main.c     ****     }
+ 439              	 .loc 2 114 0 discriminator 1
+ 440 0020 FEE7     	 b .L23
+ 441              	.L22:
+ 115:../main.c     ****   }
+ 116:../main.c     **** 
+ 117:../main.c     ****   /* Placeholder for user application code. The while loop below can be replaced with user applicat
+ 118:../main.c     ****   while(1U)
+ 119:../main.c     ****   {
+ 120:../main.c     ****     MainLoop();
+ 442              	 .loc 2 120 0 discriminator 1
+ 443 0022 FFF7FEFF 	 bl MainLoop
+ 121:../main.c     ****   }
+ 444              	 .loc 2 121 0 discriminator 1
+ 445 0026 FCE7     	 b .L22
+ 446              	 .cfi_endproc
+ 447              	.LFE277:
+ 449              	 .section .text.ERU1_3_IRQHandler,"ax",%progbits
+ 450              	 .align 2
+ 451              	 .global ERU1_3_IRQHandler
+ 452              	 .thumb
+ 453              	 .thumb_func
+ 455              	ERU1_3_IRQHandler:
+ 456              	.LFB278:
+ 122:../main.c     **** }
+ 123:../main.c     **** 
+ 124:../main.c     **** /**
+ 125:../main.c     **** 
+ 126:../main.c     ****  * @brief SYNC0IRQHandler() - EtherCAT Interrupt Routine for SYNC0
+ 127:../main.c     ****  *
+ 128:../main.c     ****  * <b>Details of function</b><br>
+ 129:../main.c     ****  * This routine is handling the SYNC0 Interrupts and need to call the SSC Stack
+ 130:../main.c     ****  */
+ 131:../main.c     **** void SYNC0IRQHandler (void)
+ 132:../main.c     **** {
+ 457              	 .loc 2 132 0
+ 458              	 .cfi_startproc
+ 459              	 
+ 460              	 
+ 461 0000 80B5     	 push {r7,lr}
+ 462              	.LCFI36:
+ 463              	 .cfi_def_cfa_offset 8
+ 464              	 .cfi_offset 7,-8
+ 465              	 .cfi_offset 14,-4
+ 466 0002 00AF     	 add r7,sp,#0
+ 467              	.LCFI37:
+ 468              	 .cfi_def_cfa_register 7
+ 133:../main.c     **** 	Sync0_Isr();
+ 469              	 .loc 2 133 0
+ 470 0004 FFF7FEFF 	 bl Sync0_Isr
+ 134:../main.c     **** }
+ 471              	 .loc 2 134 0
+ 472 0008 80BD     	 pop {r7,pc}
+ 473              	 .cfi_endproc
+ 474              	.LFE278:
+ 476 000a 00BF     	 .section .text.ERU1_0_IRQHandler,"ax",%progbits
+ 477              	 .align 2
+ 478              	 .global ERU1_0_IRQHandler
+ 479              	 .thumb
+ 480              	 .thumb_func
+ 482              	ERU1_0_IRQHandler:
+ 483              	.LFB279:
+ 135:../main.c     **** 
+ 136:../main.c     **** /**
+ 137:../main.c     **** 
+ 138:../main.c     ****  * @brief SYNC1IRQHandler() - EtherCAT Interrupt Routine for SYNC1
+ 139:../main.c     ****  *
+ 140:../main.c     ****  * <b>Details of function</b><br>
+ 141:../main.c     ****  * This routine is handling the SYNC1 Interrupts and need to call the SSC Stack
+ 142:../main.c     ****  */
+ 143:../main.c     **** void SYNC1IRQHandler (void)
+ 144:../main.c     **** {
+ 484              	 .loc 2 144 0
+ 485              	 .cfi_startproc
+ 486              	 
+ 487              	 
+ 488 0000 80B5     	 push {r7,lr}
+ 489              	.LCFI38:
+ 490              	 .cfi_def_cfa_offset 8
+ 491              	 .cfi_offset 7,-8
+ 492              	 .cfi_offset 14,-4
+ 493 0002 00AF     	 add r7,sp,#0
+ 494              	.LCFI39:
+ 495              	 .cfi_def_cfa_register 7
+ 145:../main.c     **** 	Sync1_Isr();
+ 496              	 .loc 2 145 0
+ 497 0004 FFF7FEFF 	 bl Sync1_Isr
+ 146:../main.c     **** }
+ 498              	 .loc 2 146 0
+ 499 0008 80BD     	 pop {r7,pc}
+ 500              	 .cfi_endproc
+ 501              	.LFE279:
+ 503 000a 00BF     	 .text
+ 504              	.Letext0:
+ 505              	 .file 3 "c:\\davev4-64bit\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 506              	 .file 4 "c:\\davev4-64bit\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+ 507              	 .file 5 "E:/\261\270\267\335\316\304\274\376/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/XMCLib/inc/xmc4_gpio.h"
+ 508              	 .file 6 "E:/\261\270\267\335\316\304\274\376/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Dave/Generated/DAVE.h"
+ 509              	 .file 7 "../SSC/Src/XMC_ESCObjects.h"
+ 510              	 .file 8 "E:/\261\270\267\335\316\304\274\376/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/CMSIS/Include/core_cm4.h"
+ 511              	 .file 9 "E:/\261\270\267\335\316\304\274\376/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/CMSIS/Infineon/XMC4300_series/Include/system_XMC4300.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+    {standard input}:20     .text.XMC_GPIO_SetOutputLevel:00000000 $t
+    {standard input}:24     .text.XMC_GPIO_SetOutputLevel:00000000 XMC_GPIO_SetOutputLevel
+    {standard input}:69     .text.XMC_GPIO_SetOutputHigh:00000000 $t
+    {standard input}:73     .text.XMC_GPIO_SetOutputHigh:00000000 XMC_GPIO_SetOutputHigh
+    {standard input}:116    .text.XMC_GPIO_GetInput:00000000 $t
+    {standard input}:120    .text.XMC_GPIO_GetInput:00000000 XMC_GPIO_GetInput
+    {standard input}:164    .text.XMC_GPIO_EnableDigitalInput:00000000 $t
+    {standard input}:168    .text.XMC_GPIO_EnableDigitalInput:00000000 XMC_GPIO_EnableDigitalInput
+    {standard input}:215    .text.Init_ECAT_Adapt_LED:00000000 $t
+    {standard input}:220    .text.Init_ECAT_Adapt_LED:00000000 Init_ECAT_Adapt_LED
+    {standard input}:258    .text.Init_ECAT_Adapt_LED:0000002c $d
+    {standard input}:263    .text.Init_Relax_Button:00000000 $t
+    {standard input}:268    .text.Init_Relax_Button:00000000 Init_Relax_Button
+    {standard input}:296    .text.Init_Relax_Button:00000018 $d
+    {standard input}:301    .text.process_app:00000000 $t
+    {standard input}:306    .text.process_app:00000000 process_app
+    {standard input}:395    .text.process_app:00000074 $d
+    {standard input}:401    .text.main:00000000 $t
+    {standard input}:406    .text.main:00000000 main
+    {standard input}:450    .text.ERU1_3_IRQHandler:00000000 $t
+    {standard input}:455    .text.ERU1_3_IRQHandler:00000000 ERU1_3_IRQHandler
+    {standard input}:477    .text.ERU1_0_IRQHandler:00000000 $t
+    {standard input}:482    .text.ERU1_0_IRQHandler:00000000 ERU1_0_IRQHandler
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+XMC_GPIO_SetMode
+DAVE_Init
+MainLoop
+Sync0_Isr
+Sync1_Isr

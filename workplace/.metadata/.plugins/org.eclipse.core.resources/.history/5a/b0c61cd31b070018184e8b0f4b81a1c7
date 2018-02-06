@@ -1,0 +1,155 @@
+/*
+ * Copyright (C) 2015 Infineon Technologies AG. All rights reserved.
+ *
+ * Infineon Technologies AG (Infineon) is supplying this software for use with
+ * Infineon's microcontrollers.
+ * This file can be freely distributed within development tools that are
+ * supporting such microcontrollers.
+ *
+ * THIS SOFTWARE IS PROVIDED "AS IS". NO WARRANTIES, WHETHER EXPRESS, IMPLIED
+ * OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE APPLY TO THIS SOFTWARE.
+ * INFINEON SHALL NOT, IN ANY CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL,
+ * OR CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER.
+ *
+ * ATTENTION:
+ * This example demonstrates the ethercat peripheral of XMC 4800. For this purpose an
+ * ethercat slave node implemented inside a library is included into this project.
+ * This library is for demonstration purpose within this example only and is
+ * not certified, not safe and not meant to be used in any other context than here.
+ *
+ */
+
+
+/**
+ * @file
+ * @date 2 Dec, 2015
+ * @version 1.0.0
+ *
+ * @brief XMC4800 Relax Kit EtherCat demo example
+ *
+ * This example initializes a generic slave node and makes only sense to be evaluated with a ethercat host.
+ * The generic slave implements 8x1bit and 4x16bit on input-side and
+ * 8x1bit and 4x16bit on output-side.
+ *
+ * Button1 (P15.13) and Button2 (P15.12) on your XMC4800 Relax EtherCAT Kit can be used to control of 2x1bit
+ * master input (IN_GENERIC->IN_GEN_Bit1/2).
+ *
+ * On master output side 8x1bit (OUT_GENERIC->OUT_GEN_Bit1-8) are used to control the state of 8 LEDs on your
+ * XMC4800 Relax EtherCAT Kit. Furthermore a 16bit integer (OUT_GENERIC->OUT_GEN_INT1) is used to dimm LED2 on
+ * your base board via PWM.
+ *
+ * ATTENTION:
+ * This example demonstrates the ethercat peripheral of XMC 4800. For this purpose an
+ * ethercat slave node implementation inside the library libEthCatGenSlv.a is included into this project.
+ * This library is for demonstration purpose within this example only
+ * and is not certified, not conform and not planned to be used in any other context than this
+ * example here.
+ * For your final product you have to use a slave stack which is prepared for getting certified.
+ * On the market such solutions are available.
+ * Further information on development systems and tools you find here:
+ * https://www.ethercat.org/en/products.html
+ * History <br>
+ *
+ * Version 1.0.0 Initial <br>
+ *
+ */
+
+#include <DAVE.h>               //Declarations from DAVE Code Generation (includes SFR declaration)
+#include "SSC/Src/XMC_ESCObjects.h"
+#include "probe_scope.h"	//Declaration from uc/probe libraries
+
+
+#define P_LED1 P4_0
+#define P_LED2 P4_1
+
+#define MAP2LEVEL(x) ((x==0)?XMC_GPIO_OUTPUT_LEVEL_LOW:XMC_GPIO_OUTPUT_LEVEL_HIGH)
+
+void Init_ECAT_Adapt_LED ()
+{
+  /* Set mode of all LED ports to push-pull and output level to low*/
+  XMC_GPIO_SetMode(P_LED1, XMC_GPIO_MODE_OUTPUT_PUSH_PULL);
+  XMC_GPIO_SetOutputHigh(P_LED1);
+  XMC_GPIO_SetMode(P_LED2, XMC_GPIO_MODE_OUTPUT_PUSH_PULL);
+  XMC_GPIO_SetOutputHigh(P_LED2);
+}
+
+void Init_Relax_Button ()
+{
+  /* INITIALIZE BUTTON1 ON PORT 3.4 FOR INPUT */
+  /* Set mode to input tristate */
+  XMC_GPIO_SetMode(P3_4, XMC_GPIO_MODE_INPUT_TRISTATE);
+  /* Enable digital input. Only needed because P15.13 is an analog port */
+  XMC_GPIO_EnableDigitalInput(P3_4);
+}
+
+void process_app(TOBJ7000 *OUT_GENERIC, TOBJ6000 *IN_GENERIC)
+{
+  /* OUTPUT PROCESSING */
+  /* Check bitfield set by master OUT_GEN_Bit1..8 and set LEDs accordingly */
+  XMC_GPIO_SetOutputLevel(P_LED1, MAP2LEVEL(OUT_GENERIC->OUT_GEN_Bit1));
+  XMC_GPIO_SetOutputLevel(P_LED2, MAP2LEVEL(OUT_GENERIC->OUT_GEN_Bit2));
+
+  /* INPUT PROCESSING */
+  /*Check Button 1 and set IN_GEN_Bit1 which is sent to master accordingly*/
+  if (XMC_GPIO_GetInput(P3_4))
+    IN_GENERIC->IN_GEN_Bit1 = 1;
+  else
+    IN_GENERIC->IN_GEN_Bit1 = 0;
+}
+
+int main(void)
+{
+  DAVE_STATUS_t status;
+  uint32_t timer=0;
+  status = DAVE_Init();                     /* Initialization of DAVE APPs  */
+
+  Init_ECAT_Adapt_LED ();                   /* Initialize the ports which drive LEDs on EtherCat shield*/
+  Init_Relax_Button();                      /* Initialize buttons on XMC4800 */
+
+  if(status == DAVE_STATUS_FAILURE)
+  {
+    /* Placeholder for error handler code. The while loop below can be replaced with an user error handler. */
+    XMC_DEBUG("DAVE APPs initialization failed\n");
+    while(1U)
+    {
+    }
+  }
+  //Iintialize probeScope
+  ProbeScope_Init(SystemCoreClock /TICKS_PER_SECOND);
+  /* Placeholder for user application code. The while loop below can be replaced with user application code. */
+  while(1U)
+  {
+    MainLoop();
+  }
+}
+
+/**
+
+ * @brief SYNC0IRQHandler() - EtherCAT Interrupt Routine for SYNC0
+ *
+ * <b>Details of function</b><br>
+ * This routine is handling the SYNC0 Interrupts and need to call the SSC Stack
+ */
+void SYNC0IRQHandler (void)
+{
+	//XMC_GPIO_SetMode(P2_5, XMC_GPIO_MODE_OUTPUT_PUSH_PULL);
+	//XMC_GPIO_SetOutputHigh(P2_5);
+	Sync0_Isr();
+	//XMC_GPIO_SetOutputLow(P2_5);
+}
+
+/**
+
+ * @brief SYNC1IRQHandler() - EtherCAT Interrupt Routine for SYNC1
+ *
+ * <b>Details of function</b><br>
+ * This routine is handling the SYNC1 Interrupts and need to call the SSC Stack
+ */
+void SYNC1IRQHandler (void)
+{
+	//XMC_GPIO_SetMode(P2_2, XMC_GPIO_MODE_OUTPUT_PUSH_PULL);
+	//XMC_GPIO_SetOutputHigh(P2_2);
+	Sync1_Isr();
+	//XMC_GPIO_SetOutputLow(P2_2);
+}

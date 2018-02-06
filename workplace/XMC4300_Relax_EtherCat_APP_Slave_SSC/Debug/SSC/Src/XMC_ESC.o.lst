@@ -1,0 +1,1079 @@
+   1              	 .syntax unified
+   2              	 .cpu cortex-m4
+   3              	 .eabi_attribute 27,3
+   4              	 .fpu fpv4-sp-d16
+   5              	 .eabi_attribute 20,1
+   6              	 .eabi_attribute 21,1
+   7              	 .eabi_attribute 23,3
+   8              	 .eabi_attribute 24,1
+   9              	 .eabi_attribute 25,1
+  10              	 .eabi_attribute 26,1
+  11              	 .eabi_attribute 30,6
+  12              	 .eabi_attribute 34,1
+  13              	 .eabi_attribute 18,4
+  14              	 .thumb
+  15              	 .file "XMC_ESC.c"
+  16              	 .text
+  17              	.Ltext0:
+  18              	 .cfi_sections .debug_frame
+  19              	 .global OUT_GENERICProcessDataMapping0x1600
+  20              	 .section .data.OUT_GENERICProcessDataMapping0x1600,"aw",%progbits
+  21              	 .align 2
+  24              	OUT_GENERICProcessDataMapping0x1600:
+  25 0000 0C00     	 .short 12
+  26 0002 0000     	 .space 2
+  27 0004 10010070 	 .word 1879048464
+  28 0008 10020070 	 .word 1879048720
+  29 000c 10030070 	 .word 1879048976
+  30 0010 10040070 	 .word 1879049232
+  31 0014 01050070 	 .word 1879049473
+  32 0018 01060070 	 .word 1879049729
+  33 001c 01070070 	 .word 1879049985
+  34 0020 01080070 	 .word 1879050241
+  35 0024 01090070 	 .word 1879050497
+  36 0028 010A0070 	 .word 1879050753
+  37 002c 010B0070 	 .word 1879051009
+  38 0030 010C0070 	 .word 1879051265
+  39              	 .global IN_GENERICProcessDataMapping0x1A00
+  40              	 .section .data.IN_GENERICProcessDataMapping0x1A00,"aw",%progbits
+  41              	 .align 2
+  44              	IN_GENERICProcessDataMapping0x1A00:
+  45 0000 0C00     	 .short 12
+  46 0002 0000     	 .space 2
+  47 0004 10010060 	 .word 1610613008
+  48 0008 10020060 	 .word 1610613264
+  49 000c 10030060 	 .word 1610613520
+  50 0010 10040060 	 .word 1610613776
+  51 0014 01050060 	 .word 1610614017
+  52 0018 01060060 	 .word 1610614273
+  53 001c 01070060 	 .word 1610614529
+  54 0020 01080060 	 .word 1610614785
+  55 0024 01090060 	 .word 1610615041
+  56 0028 010A0060 	 .word 1610615297
+  57 002c 010B0060 	 .word 1610615553
+  58 0030 010C0060 	 .word 1610615809
+  59              	 .global sRxPDOassign
+  60              	 .section .data.sRxPDOassign,"aw",%progbits
+  61              	 .align 2
+  64              	sRxPDOassign:
+  65 0000 0100     	 .short 1
+  66 0002 0016     	 .short 5632
+  67              	 .global sTxPDOassign
+  68              	 .section .data.sTxPDOassign,"aw",%progbits
+  69              	 .align 2
+  72              	sTxPDOassign:
+  73 0000 0100     	 .short 1
+  74 0002 001A     	 .short 6656
+  75              	 .global IN_GENERIC0x6000
+  76              	 .section .data.IN_GENERIC0x6000,"aw",%progbits
+  77              	 .align 2
+  80              	IN_GENERIC0x6000:
+  81 0000 0C00     	 .short 12
+  82 0002 0000     	 .short 0
+  83 0004 0000     	 .short 0
+  84 0006 0000     	 .short 0
+  85 0008 0000     	 .short 0
+  86 000a 00       	 .byte 0
+  87 000b 00       	 .space 1
+  88              	 .global OUT_GENERIC0x7000
+  89              	 .section .data.OUT_GENERIC0x7000,"aw",%progbits
+  90              	 .align 2
+  93              	OUT_GENERIC0x7000:
+  94 0000 0C00     	 .short 12
+  95 0002 0000     	 .short 0
+  96 0004 0000     	 .short 0
+  97 0006 0000     	 .short 0
+  98 0008 0000     	 .short 0
+  99 000a 00       	 .byte 0
+ 100 000b 00       	 .space 1
+ 101              	 .section .text.APPL_AckErrorInd,"ax",%progbits
+ 102              	 .align 2
+ 103              	 .global APPL_AckErrorInd
+ 104              	 .thumb
+ 105              	 .thumb_func
+ 107              	APPL_AckErrorInd:
+ 108              	.LFB172:
+ 109              	 .file 1 "../SSC/Src/XMC_ESC.c"
+   1:../SSC/Src/XMC_ESC.c **** /**
+   2:../SSC/Src/XMC_ESC.c **** \addtogroup XMC_ESC XMC_ESC
+   3:../SSC/Src/XMC_ESC.c **** @{
+   4:../SSC/Src/XMC_ESC.c **** */
+   5:../SSC/Src/XMC_ESC.c **** 
+   6:../SSC/Src/XMC_ESC.c **** /**
+   7:../SSC/Src/XMC_ESC.c **** \file XMC_ESC.c
+   8:../SSC/Src/XMC_ESC.c **** \brief Implementation
+   9:../SSC/Src/XMC_ESC.c **** 
+  10:../SSC/Src/XMC_ESC.c **** \version 1.0.0.11
+  11:../SSC/Src/XMC_ESC.c **** */
+  12:../SSC/Src/XMC_ESC.c **** 
+  13:../SSC/Src/XMC_ESC.c **** 
+  14:../SSC/Src/XMC_ESC.c **** /*-----------------------------------------------------------------------------------------
+  15:../SSC/Src/XMC_ESC.c **** ------
+  16:../SSC/Src/XMC_ESC.c **** ------    Includes
+  17:../SSC/Src/XMC_ESC.c **** ------
+  18:../SSC/Src/XMC_ESC.c **** -----------------------------------------------------------------------------------------*/
+  19:../SSC/Src/XMC_ESC.c **** #include "ecat_def.h"
+  20:../SSC/Src/XMC_ESC.c **** 
+  21:../SSC/Src/XMC_ESC.c **** #include "applInterface.h"
+  22:../SSC/Src/XMC_ESC.c **** 
+  23:../SSC/Src/XMC_ESC.c **** #define _XMC__ESC_ 1
+  24:../SSC/Src/XMC_ESC.c **** #include "XMC_ESC.h"
+  25:../SSC/Src/XMC_ESC.c **** #undef _XMC__ESC_
+  26:../SSC/Src/XMC_ESC.c **** /*--------------------------------------------------------------------------------------
+  27:../SSC/Src/XMC_ESC.c **** ------
+  28:../SSC/Src/XMC_ESC.c **** ------    local types and defines
+  29:../SSC/Src/XMC_ESC.c **** ------
+  30:../SSC/Src/XMC_ESC.c **** --------------------------------------------------------------------------------------*/
+  31:../SSC/Src/XMC_ESC.c **** 
+  32:../SSC/Src/XMC_ESC.c **** /*-----------------------------------------------------------------------------------------
+  33:../SSC/Src/XMC_ESC.c **** ------
+  34:../SSC/Src/XMC_ESC.c **** ------    local variables and constants
+  35:../SSC/Src/XMC_ESC.c **** ------
+  36:../SSC/Src/XMC_ESC.c **** -----------------------------------------------------------------------------------------*/
+  37:../SSC/Src/XMC_ESC.c **** 
+  38:../SSC/Src/XMC_ESC.c **** /*-----------------------------------------------------------------------------------------
+  39:../SSC/Src/XMC_ESC.c **** ------
+  40:../SSC/Src/XMC_ESC.c **** ------    application specific functions
+  41:../SSC/Src/XMC_ESC.c **** ------
+  42:../SSC/Src/XMC_ESC.c **** -----------------------------------------------------------------------------------------*/
+  43:../SSC/Src/XMC_ESC.c **** 
+  44:../SSC/Src/XMC_ESC.c **** /*-----------------------------------------------------------------------------------------
+  45:../SSC/Src/XMC_ESC.c **** ------
+  46:../SSC/Src/XMC_ESC.c **** ------    generic functions
+  47:../SSC/Src/XMC_ESC.c **** ------
+  48:../SSC/Src/XMC_ESC.c **** -----------------------------------------------------------------------------------------*/
+  49:../SSC/Src/XMC_ESC.c **** 
+  50:../SSC/Src/XMC_ESC.c **** /////////////////////////////////////////////////////////////////////////////////////////
+  51:../SSC/Src/XMC_ESC.c **** /**
+  52:../SSC/Src/XMC_ESC.c ****  \brief    The function is called when an error state was acknowledged by the master
+  53:../SSC/Src/XMC_ESC.c **** 
+  54:../SSC/Src/XMC_ESC.c **** *////////////////////////////////////////////////////////////////////////////////////////
+  55:../SSC/Src/XMC_ESC.c **** 
+  56:../SSC/Src/XMC_ESC.c **** void    APPL_AckErrorInd(UINT16 stateTrans)
+  57:../SSC/Src/XMC_ESC.c **** {
+ 110              	 .loc 1 57 0
+ 111              	 .cfi_startproc
+ 112              	 
+ 113              	 
+ 114              	 
+ 115 0000 80B4     	 push {r7}
+ 116              	.LCFI0:
+ 117              	 .cfi_def_cfa_offset 4
+ 118              	 .cfi_offset 7,-4
+ 119 0002 83B0     	 sub sp,sp,#12
+ 120              	.LCFI1:
+ 121              	 .cfi_def_cfa_offset 16
+ 122 0004 00AF     	 add r7,sp,#0
+ 123              	.LCFI2:
+ 124              	 .cfi_def_cfa_register 7
+ 125 0006 0346     	 mov r3,r0
+ 126 0008 FB80     	 strh r3,[r7,#6]
+  58:../SSC/Src/XMC_ESC.c **** 
+  59:../SSC/Src/XMC_ESC.c **** }
+ 127              	 .loc 1 59 0
+ 128 000a 0C37     	 adds r7,r7,#12
+ 129              	.LCFI3:
+ 130              	 .cfi_def_cfa_offset 4
+ 131 000c BD46     	 mov sp,r7
+ 132              	.LCFI4:
+ 133              	 .cfi_def_cfa_register 13
+ 134              	 
+ 135 000e 5DF8047B 	 ldr r7,[sp],#4
+ 136              	.LCFI5:
+ 137              	 .cfi_restore 7
+ 138              	 .cfi_def_cfa_offset 0
+ 139 0012 7047     	 bx lr
+ 140              	 .cfi_endproc
+ 141              	.LFE172:
+ 143              	 .section .text.APPL_StartMailboxHandler,"ax",%progbits
+ 144              	 .align 2
+ 145              	 .global APPL_StartMailboxHandler
+ 146              	 .thumb
+ 147              	 .thumb_func
+ 149              	APPL_StartMailboxHandler:
+ 150              	.LFB173:
+  60:../SSC/Src/XMC_ESC.c **** 
+  61:../SSC/Src/XMC_ESC.c **** /////////////////////////////////////////////////////////////////////////////////////////
+  62:../SSC/Src/XMC_ESC.c **** /**
+  63:../SSC/Src/XMC_ESC.c ****  \return    AL Status Code (see ecatslv.h ALSTATUSCODE_....)
+  64:../SSC/Src/XMC_ESC.c **** 
+  65:../SSC/Src/XMC_ESC.c ****  \brief    The function is called in the state transition from INIT to PREOP when
+  66:../SSC/Src/XMC_ESC.c ****              all general settings were checked to start the mailbox handler. This function
+  67:../SSC/Src/XMC_ESC.c ****              informs the application about the state transition, the application can refuse
+  68:../SSC/Src/XMC_ESC.c ****              the state transition when returning an AL Status error code.
+  69:../SSC/Src/XMC_ESC.c ****             The return code NOERROR_INWORK can be used, if the application cannot confirm
+  70:../SSC/Src/XMC_ESC.c ****             the state transition immediately, in that case this function will be called cyclically
+  71:../SSC/Src/XMC_ESC.c ****             until a value unequal NOERROR_INWORK is returned
+  72:../SSC/Src/XMC_ESC.c **** 
+  73:../SSC/Src/XMC_ESC.c **** *////////////////////////////////////////////////////////////////////////////////////////
+  74:../SSC/Src/XMC_ESC.c **** 
+  75:../SSC/Src/XMC_ESC.c **** UINT16 APPL_StartMailboxHandler(void)
+  76:../SSC/Src/XMC_ESC.c **** {
+ 151              	 .loc 1 76 0
+ 152              	 .cfi_startproc
+ 153              	 
+ 154              	 
+ 155              	 
+ 156 0000 80B4     	 push {r7}
+ 157              	.LCFI6:
+ 158              	 .cfi_def_cfa_offset 4
+ 159              	 .cfi_offset 7,-4
+ 160 0002 00AF     	 add r7,sp,#0
+ 161              	.LCFI7:
+ 162              	 .cfi_def_cfa_register 7
+  77:../SSC/Src/XMC_ESC.c ****     return ALSTATUSCODE_NOERROR;
+ 163              	 .loc 1 77 0
+ 164 0004 0023     	 movs r3,#0
+  78:../SSC/Src/XMC_ESC.c **** }
+ 165              	 .loc 1 78 0
+ 166 0006 1846     	 mov r0,r3
+ 167 0008 BD46     	 mov sp,r7
+ 168              	.LCFI8:
+ 169              	 .cfi_def_cfa_register 13
+ 170              	 
+ 171 000a 5DF8047B 	 ldr r7,[sp],#4
+ 172              	.LCFI9:
+ 173              	 .cfi_restore 7
+ 174              	 .cfi_def_cfa_offset 0
+ 175 000e 7047     	 bx lr
+ 176              	 .cfi_endproc
+ 177              	.LFE173:
+ 179              	 .section .text.APPL_StopMailboxHandler,"ax",%progbits
+ 180              	 .align 2
+ 181              	 .global APPL_StopMailboxHandler
+ 182              	 .thumb
+ 183              	 .thumb_func
+ 185              	APPL_StopMailboxHandler:
+ 186              	.LFB174:
+  79:../SSC/Src/XMC_ESC.c **** 
+  80:../SSC/Src/XMC_ESC.c **** /////////////////////////////////////////////////////////////////////////////////////////
+  81:../SSC/Src/XMC_ESC.c **** /**
+  82:../SSC/Src/XMC_ESC.c ****  \return     0, NOERROR_INWORK
+  83:../SSC/Src/XMC_ESC.c **** 
+  84:../SSC/Src/XMC_ESC.c ****  \brief    The function is called in the state transition from PREEOP to INIT
+  85:../SSC/Src/XMC_ESC.c ****              to stop the mailbox handler. This functions informs the application
+  86:../SSC/Src/XMC_ESC.c ****              about the state transition, the application cannot refuse
+  87:../SSC/Src/XMC_ESC.c ****              the state transition.
+  88:../SSC/Src/XMC_ESC.c **** 
+  89:../SSC/Src/XMC_ESC.c **** *////////////////////////////////////////////////////////////////////////////////////////
+  90:../SSC/Src/XMC_ESC.c **** 
+  91:../SSC/Src/XMC_ESC.c **** UINT16 APPL_StopMailboxHandler(void)
+  92:../SSC/Src/XMC_ESC.c **** {
+ 187              	 .loc 1 92 0
+ 188              	 .cfi_startproc
+ 189              	 
+ 190              	 
+ 191              	 
+ 192 0000 80B4     	 push {r7}
+ 193              	.LCFI10:
+ 194              	 .cfi_def_cfa_offset 4
+ 195              	 .cfi_offset 7,-4
+ 196 0002 00AF     	 add r7,sp,#0
+ 197              	.LCFI11:
+ 198              	 .cfi_def_cfa_register 7
+  93:../SSC/Src/XMC_ESC.c ****     return ALSTATUSCODE_NOERROR;
+ 199              	 .loc 1 93 0
+ 200 0004 0023     	 movs r3,#0
+  94:../SSC/Src/XMC_ESC.c **** }
+ 201              	 .loc 1 94 0
+ 202 0006 1846     	 mov r0,r3
+ 203 0008 BD46     	 mov sp,r7
+ 204              	.LCFI12:
+ 205              	 .cfi_def_cfa_register 13
+ 206              	 
+ 207 000a 5DF8047B 	 ldr r7,[sp],#4
+ 208              	.LCFI13:
+ 209              	 .cfi_restore 7
+ 210              	 .cfi_def_cfa_offset 0
+ 211 000e 7047     	 bx lr
+ 212              	 .cfi_endproc
+ 213              	.LFE174:
+ 215              	 .section .text.APPL_StartInputHandler,"ax",%progbits
+ 216              	 .align 2
+ 217              	 .global APPL_StartInputHandler
+ 218              	 .thumb
+ 219              	 .thumb_func
+ 221              	APPL_StartInputHandler:
+ 222              	.LFB175:
+  95:../SSC/Src/XMC_ESC.c **** 
+  96:../SSC/Src/XMC_ESC.c **** /////////////////////////////////////////////////////////////////////////////////////////
+  97:../SSC/Src/XMC_ESC.c **** /**
+  98:../SSC/Src/XMC_ESC.c ****  \param    pIntMask    pointer to the AL Event Mask which will be written to the AL event Mask
+  99:../SSC/Src/XMC_ESC.c ****                         register (0x204) when this function is succeeded. The event mask can be ada
+ 100:../SSC/Src/XMC_ESC.c ****                         in this function
+ 101:../SSC/Src/XMC_ESC.c ****  \return    AL Status Code (see ecatslv.h ALSTATUSCODE_....)
+ 102:../SSC/Src/XMC_ESC.c **** 
+ 103:../SSC/Src/XMC_ESC.c ****  \brief    The function is called in the state transition from PREOP to SAFEOP when
+ 104:../SSC/Src/XMC_ESC.c ****            all general settings were checked to start the input handler. This function
+ 105:../SSC/Src/XMC_ESC.c ****            informs the application about the state transition, the application can refuse
+ 106:../SSC/Src/XMC_ESC.c ****            the state transition when returning an AL Status error code.
+ 107:../SSC/Src/XMC_ESC.c ****            The return code NOERROR_INWORK can be used, if the application cannot confirm
+ 108:../SSC/Src/XMC_ESC.c ****            the state transition immediately, in that case the application need to be complete 
+ 109:../SSC/Src/XMC_ESC.c ****            the transition by calling ECAT_StateChange.
+ 110:../SSC/Src/XMC_ESC.c **** *////////////////////////////////////////////////////////////////////////////////////////
+ 111:../SSC/Src/XMC_ESC.c **** 
+ 112:../SSC/Src/XMC_ESC.c **** UINT16 APPL_StartInputHandler(UINT16 *pIntMask)
+ 113:../SSC/Src/XMC_ESC.c **** {
+ 223              	 .loc 1 113 0
+ 224              	 .cfi_startproc
+ 225              	 
+ 226              	 
+ 227              	 
+ 228 0000 80B4     	 push {r7}
+ 229              	.LCFI14:
+ 230              	 .cfi_def_cfa_offset 4
+ 231              	 .cfi_offset 7,-4
+ 232 0002 83B0     	 sub sp,sp,#12
+ 233              	.LCFI15:
+ 234              	 .cfi_def_cfa_offset 16
+ 235 0004 00AF     	 add r7,sp,#0
+ 236              	.LCFI16:
+ 237              	 .cfi_def_cfa_register 7
+ 238 0006 7860     	 str r0,[r7,#4]
+ 114:../SSC/Src/XMC_ESC.c ****     return ALSTATUSCODE_NOERROR;
+ 239              	 .loc 1 114 0
+ 240 0008 0023     	 movs r3,#0
+ 115:../SSC/Src/XMC_ESC.c **** }
+ 241              	 .loc 1 115 0
+ 242 000a 1846     	 mov r0,r3
+ 243 000c 0C37     	 adds r7,r7,#12
+ 244              	.LCFI17:
+ 245              	 .cfi_def_cfa_offset 4
+ 246 000e BD46     	 mov sp,r7
+ 247              	.LCFI18:
+ 248              	 .cfi_def_cfa_register 13
+ 249              	 
+ 250 0010 5DF8047B 	 ldr r7,[sp],#4
+ 251              	.LCFI19:
+ 252              	 .cfi_restore 7
+ 253              	 .cfi_def_cfa_offset 0
+ 254 0014 7047     	 bx lr
+ 255              	 .cfi_endproc
+ 256              	.LFE175:
+ 258 0016 00BF     	 .section .text.APPL_StopInputHandler,"ax",%progbits
+ 259              	 .align 2
+ 260              	 .global APPL_StopInputHandler
+ 261              	 .thumb
+ 262              	 .thumb_func
+ 264              	APPL_StopInputHandler:
+ 265              	.LFB176:
+ 116:../SSC/Src/XMC_ESC.c **** 
+ 117:../SSC/Src/XMC_ESC.c **** /////////////////////////////////////////////////////////////////////////////////////////
+ 118:../SSC/Src/XMC_ESC.c **** /**
+ 119:../SSC/Src/XMC_ESC.c ****  \return     0, NOERROR_INWORK
+ 120:../SSC/Src/XMC_ESC.c **** 
+ 121:../SSC/Src/XMC_ESC.c ****  \brief    The function is called in the state transition from SAFEOP to PREEOP
+ 122:../SSC/Src/XMC_ESC.c ****              to stop the input handler. This functions informs the application
+ 123:../SSC/Src/XMC_ESC.c ****              about the state transition, the application cannot refuse
+ 124:../SSC/Src/XMC_ESC.c ****              the state transition.
+ 125:../SSC/Src/XMC_ESC.c **** 
+ 126:../SSC/Src/XMC_ESC.c **** *////////////////////////////////////////////////////////////////////////////////////////
+ 127:../SSC/Src/XMC_ESC.c **** 
+ 128:../SSC/Src/XMC_ESC.c **** UINT16 APPL_StopInputHandler(void)
+ 129:../SSC/Src/XMC_ESC.c **** {
+ 266              	 .loc 1 129 0
+ 267              	 .cfi_startproc
+ 268              	 
+ 269              	 
+ 270              	 
+ 271 0000 80B4     	 push {r7}
+ 272              	.LCFI20:
+ 273              	 .cfi_def_cfa_offset 4
+ 274              	 .cfi_offset 7,-4
+ 275 0002 00AF     	 add r7,sp,#0
+ 276              	.LCFI21:
+ 277              	 .cfi_def_cfa_register 7
+ 130:../SSC/Src/XMC_ESC.c ****     return ALSTATUSCODE_NOERROR;
+ 278              	 .loc 1 130 0
+ 279 0004 0023     	 movs r3,#0
+ 131:../SSC/Src/XMC_ESC.c **** }
+ 280              	 .loc 1 131 0
+ 281 0006 1846     	 mov r0,r3
+ 282 0008 BD46     	 mov sp,r7
+ 283              	.LCFI22:
+ 284              	 .cfi_def_cfa_register 13
+ 285              	 
+ 286 000a 5DF8047B 	 ldr r7,[sp],#4
+ 287              	.LCFI23:
+ 288              	 .cfi_restore 7
+ 289              	 .cfi_def_cfa_offset 0
+ 290 000e 7047     	 bx lr
+ 291              	 .cfi_endproc
+ 292              	.LFE176:
+ 294              	 .section .text.APPL_StartOutputHandler,"ax",%progbits
+ 295              	 .align 2
+ 296              	 .global APPL_StartOutputHandler
+ 297              	 .thumb
+ 298              	 .thumb_func
+ 300              	APPL_StartOutputHandler:
+ 301              	.LFB177:
+ 132:../SSC/Src/XMC_ESC.c **** 
+ 133:../SSC/Src/XMC_ESC.c **** /////////////////////////////////////////////////////////////////////////////////////////
+ 134:../SSC/Src/XMC_ESC.c **** /**
+ 135:../SSC/Src/XMC_ESC.c ****  \return    AL Status Code (see ecatslv.h ALSTATUSCODE_....)
+ 136:../SSC/Src/XMC_ESC.c **** 
+ 137:../SSC/Src/XMC_ESC.c ****  \brief    The function is called in the state transition from SAFEOP to OP when
+ 138:../SSC/Src/XMC_ESC.c ****              all general settings were checked to start the output handler. This function
+ 139:../SSC/Src/XMC_ESC.c ****              informs the application about the state transition, the application can refuse
+ 140:../SSC/Src/XMC_ESC.c ****              the state transition when returning an AL Status error code.
+ 141:../SSC/Src/XMC_ESC.c ****            The return code NOERROR_INWORK can be used, if the application cannot confirm
+ 142:../SSC/Src/XMC_ESC.c ****            the state transition immediately, in that case the application need to be complete 
+ 143:../SSC/Src/XMC_ESC.c ****            the transition by calling ECAT_StateChange.
+ 144:../SSC/Src/XMC_ESC.c **** *////////////////////////////////////////////////////////////////////////////////////////
+ 145:../SSC/Src/XMC_ESC.c **** 
+ 146:../SSC/Src/XMC_ESC.c **** UINT16 APPL_StartOutputHandler(void)
+ 147:../SSC/Src/XMC_ESC.c **** {
+ 302              	 .loc 1 147 0
+ 303              	 .cfi_startproc
+ 304              	 
+ 305              	 
+ 306              	 
+ 307 0000 80B4     	 push {r7}
+ 308              	.LCFI24:
+ 309              	 .cfi_def_cfa_offset 4
+ 310              	 .cfi_offset 7,-4
+ 311 0002 00AF     	 add r7,sp,#0
+ 312              	.LCFI25:
+ 313              	 .cfi_def_cfa_register 7
+ 148:../SSC/Src/XMC_ESC.c ****     return ALSTATUSCODE_NOERROR;
+ 314              	 .loc 1 148 0
+ 315 0004 0023     	 movs r3,#0
+ 149:../SSC/Src/XMC_ESC.c **** }
+ 316              	 .loc 1 149 0
+ 317 0006 1846     	 mov r0,r3
+ 318 0008 BD46     	 mov sp,r7
+ 319              	.LCFI26:
+ 320              	 .cfi_def_cfa_register 13
+ 321              	 
+ 322 000a 5DF8047B 	 ldr r7,[sp],#4
+ 323              	.LCFI27:
+ 324              	 .cfi_restore 7
+ 325              	 .cfi_def_cfa_offset 0
+ 326 000e 7047     	 bx lr
+ 327              	 .cfi_endproc
+ 328              	.LFE177:
+ 330              	 .section .text.APPL_StopOutputHandler,"ax",%progbits
+ 331              	 .align 2
+ 332              	 .global APPL_StopOutputHandler
+ 333              	 .thumb
+ 334              	 .thumb_func
+ 336              	APPL_StopOutputHandler:
+ 337              	.LFB178:
+ 150:../SSC/Src/XMC_ESC.c **** 
+ 151:../SSC/Src/XMC_ESC.c **** /////////////////////////////////////////////////////////////////////////////////////////
+ 152:../SSC/Src/XMC_ESC.c **** /**
+ 153:../SSC/Src/XMC_ESC.c ****  \return     0, NOERROR_INWORK
+ 154:../SSC/Src/XMC_ESC.c **** 
+ 155:../SSC/Src/XMC_ESC.c ****  \brief    The function is called in the state transition from OP to SAFEOP
+ 156:../SSC/Src/XMC_ESC.c ****              to stop the output handler. This functions informs the application
+ 157:../SSC/Src/XMC_ESC.c ****              about the state transition, the application cannot refuse
+ 158:../SSC/Src/XMC_ESC.c ****              the state transition.
+ 159:../SSC/Src/XMC_ESC.c **** 
+ 160:../SSC/Src/XMC_ESC.c **** *////////////////////////////////////////////////////////////////////////////////////////
+ 161:../SSC/Src/XMC_ESC.c **** 
+ 162:../SSC/Src/XMC_ESC.c **** UINT16 APPL_StopOutputHandler(void)
+ 163:../SSC/Src/XMC_ESC.c **** {
+ 338              	 .loc 1 163 0
+ 339              	 .cfi_startproc
+ 340              	 
+ 341              	 
+ 342              	 
+ 343 0000 80B4     	 push {r7}
+ 344              	.LCFI28:
+ 345              	 .cfi_def_cfa_offset 4
+ 346              	 .cfi_offset 7,-4
+ 347 0002 00AF     	 add r7,sp,#0
+ 348              	.LCFI29:
+ 349              	 .cfi_def_cfa_register 7
+ 164:../SSC/Src/XMC_ESC.c ****     return ALSTATUSCODE_NOERROR;
+ 350              	 .loc 1 164 0
+ 351 0004 0023     	 movs r3,#0
+ 165:../SSC/Src/XMC_ESC.c **** }
+ 352              	 .loc 1 165 0
+ 353 0006 1846     	 mov r0,r3
+ 354 0008 BD46     	 mov sp,r7
+ 355              	.LCFI30:
+ 356              	 .cfi_def_cfa_register 13
+ 357              	 
+ 358 000a 5DF8047B 	 ldr r7,[sp],#4
+ 359              	.LCFI31:
+ 360              	 .cfi_restore 7
+ 361              	 .cfi_def_cfa_offset 0
+ 362 000e 7047     	 bx lr
+ 363              	 .cfi_endproc
+ 364              	.LFE178:
+ 366              	 .section .text.APPL_GenerateMapping,"ax",%progbits
+ 367              	 .align 2
+ 368              	 .global APPL_GenerateMapping
+ 369              	 .thumb
+ 370              	 .thumb_func
+ 372              	APPL_GenerateMapping:
+ 373              	.LFB179:
+ 166:../SSC/Src/XMC_ESC.c **** 
+ 167:../SSC/Src/XMC_ESC.c **** /////////////////////////////////////////////////////////////////////////////////////////
+ 168:../SSC/Src/XMC_ESC.c **** /**
+ 169:../SSC/Src/XMC_ESC.c **** \return     0(ALSTATUSCODE_NOERROR), NOERROR_INWORK
+ 170:../SSC/Src/XMC_ESC.c **** \param      pInputSize  pointer to save the input process data length
+ 171:../SSC/Src/XMC_ESC.c **** \param      pOutputSize  pointer to save the output process data length
+ 172:../SSC/Src/XMC_ESC.c **** 
+ 173:../SSC/Src/XMC_ESC.c **** \brief    This function calculates the process data sizes from the actual SM-PDO-Assign
+ 174:../SSC/Src/XMC_ESC.c ****             and PDO mapping
+ 175:../SSC/Src/XMC_ESC.c **** *////////////////////////////////////////////////////////////////////////////////////////
+ 176:../SSC/Src/XMC_ESC.c **** UINT16 APPL_GenerateMapping(UINT16 *pInputSize,UINT16 *pOutputSize)
+ 177:../SSC/Src/XMC_ESC.c **** {
+ 374              	 .loc 1 177 0
+ 375              	 .cfi_startproc
+ 376              	 
+ 377              	 
+ 378 0000 90B5     	 push {r4,r7,lr}
+ 379              	.LCFI32:
+ 380              	 .cfi_def_cfa_offset 12
+ 381              	 .cfi_offset 4,-12
+ 382              	 .cfi_offset 7,-8
+ 383              	 .cfi_offset 14,-4
+ 384 0002 89B0     	 sub sp,sp,#36
+ 385              	.LCFI33:
+ 386              	 .cfi_def_cfa_offset 48
+ 387 0004 00AF     	 add r7,sp,#0
+ 388              	.LCFI34:
+ 389              	 .cfi_def_cfa_register 7
+ 390 0006 7860     	 str r0,[r7,#4]
+ 391 0008 3960     	 str r1,[r7]
+ 178:../SSC/Src/XMC_ESC.c ****     UINT16 result = ALSTATUSCODE_NOERROR;
+ 392              	 .loc 1 178 0
+ 393 000a 0023     	 movs r3,#0
+ 394 000c FB83     	 strh r3,[r7,#30]
+ 179:../SSC/Src/XMC_ESC.c ****     UINT16 InputSize = 0;
+ 395              	 .loc 1 179 0
+ 396 000e 0023     	 movs r3,#0
+ 397 0010 BB83     	 strh r3,[r7,#28]
+ 180:../SSC/Src/XMC_ESC.c ****     UINT16 OutputSize = 0;
+ 398              	 .loc 1 180 0
+ 399 0012 0023     	 movs r3,#0
+ 400 0014 7B83     	 strh r3,[r7,#26]
+ 181:../SSC/Src/XMC_ESC.c **** 
+ 182:../SSC/Src/XMC_ESC.c **** #if COE_SUPPORTED
+ 183:../SSC/Src/XMC_ESC.c ****     UINT16 PDOAssignEntryCnt = 0;
+ 401              	 .loc 1 183 0
+ 402 0016 0023     	 movs r3,#0
+ 403 0018 3B83     	 strh r3,[r7,#24]
+ 184:../SSC/Src/XMC_ESC.c ****     OBJCONST TOBJECT OBJMEM * pPDO = NULL;
+ 404              	 .loc 1 184 0
+ 405 001a 0023     	 movs r3,#0
+ 406 001c 3B61     	 str r3,[r7,#16]
+ 185:../SSC/Src/XMC_ESC.c ****     UINT16 PDOSubindex0 = 0;
+ 407              	 .loc 1 185 0
+ 408 001e 0023     	 movs r3,#0
+ 409 0020 FB81     	 strh r3,[r7,#14]
+ 186:../SSC/Src/XMC_ESC.c ****     UINT32 *pPDOEntry = NULL;
+ 410              	 .loc 1 186 0
+ 411 0022 0023     	 movs r3,#0
+ 412 0024 BB60     	 str r3,[r7,#8]
+ 187:../SSC/Src/XMC_ESC.c ****     UINT16 PDOEntryCnt = 0;
+ 413              	 .loc 1 187 0
+ 414 0026 0023     	 movs r3,#0
+ 415 0028 FB82     	 strh r3,[r7,#22]
+ 188:../SSC/Src/XMC_ESC.c ****    
+ 189:../SSC/Src/XMC_ESC.c ****     /*Scan object 0x1C12 RXPDO assign*/
+ 190:../SSC/Src/XMC_ESC.c ****     for(PDOAssignEntryCnt = 0; PDOAssignEntryCnt < sRxPDOassign.u16SubIndex0; PDOAssignEntryCnt++)
+ 416              	 .loc 1 190 0
+ 417 002a 0023     	 movs r3,#0
+ 418 002c 3B83     	 strh r3,[r7,#24]
+ 419 002e 39E0     	 b .L15
+ 420              	.L21:
+ 191:../SSC/Src/XMC_ESC.c ****     {
+ 192:../SSC/Src/XMC_ESC.c ****         pPDO = OBJ_GetObjectHandle(sRxPDOassign.aEntries[PDOAssignEntryCnt]);
+ 421              	 .loc 1 192 0
+ 422 0030 3B8B     	 ldrh r3,[r7,#24]
+ 423 0032 4B4A     	 ldr r2,.L32
+ 424 0034 5B00     	 lsls r3,r3,#1
+ 425 0036 1344     	 add r3,r3,r2
+ 426 0038 5B88     	 ldrh r3,[r3,#2]
+ 427 003a 1846     	 mov r0,r3
+ 428 003c FFF7FEFF 	 bl OBJ_GetObjectHandle
+ 429 0040 3861     	 str r0,[r7,#16]
+ 193:../SSC/Src/XMC_ESC.c ****         if(pPDO != NULL)
+ 430              	 .loc 1 193 0
+ 431 0042 3B69     	 ldr r3,[r7,#16]
+ 432 0044 002B     	 cmp r3,#0
+ 433 0046 25D0     	 beq .L16
+ 194:../SSC/Src/XMC_ESC.c ****         {
+ 195:../SSC/Src/XMC_ESC.c ****             PDOSubindex0 = *((UINT16 *)pPDO->pVarPtr);
+ 434              	 .loc 1 195 0
+ 435 0048 3B69     	 ldr r3,[r7,#16]
+ 436 004a 9B69     	 ldr r3,[r3,#24]
+ 437 004c 1B88     	 ldrh r3,[r3]
+ 438 004e FB81     	 strh r3,[r7,#14]
+ 196:../SSC/Src/XMC_ESC.c ****             for(PDOEntryCnt = 0; PDOEntryCnt < PDOSubindex0; PDOEntryCnt++)
+ 439              	 .loc 1 196 0
+ 440 0050 0023     	 movs r3,#0
+ 441 0052 FB82     	 strh r3,[r7,#22]
+ 442 0054 19E0     	 b .L17
+ 443              	.L18:
+ 197:../SSC/Src/XMC_ESC.c ****             {
+ 198:../SSC/Src/XMC_ESC.c ****                 pPDOEntry = (UINT32 *)((UINT8 *)pPDO->pVarPtr + (OBJ_GetEntryOffset((PDOEntryCnt+1)
+ 444              	 .loc 1 198 0 discriminator 3
+ 445 0056 3B69     	 ldr r3,[r7,#16]
+ 446 0058 9C69     	 ldr r4,[r3,#24]
+ 447 005a FB8A     	 ldrh r3,[r7,#22]
+ 448 005c DBB2     	 uxtb r3,r3
+ 449 005e 0133     	 adds r3,r3,#1
+ 450 0060 DBB2     	 uxtb r3,r3
+ 451 0062 1846     	 mov r0,r3
+ 452 0064 3969     	 ldr r1,[r7,#16]
+ 453 0066 FFF7FEFF 	 bl OBJ_GetEntryOffset
+ 454 006a 0346     	 mov r3,r0
+ 455 006c DB08     	 lsrs r3,r3,#3
+ 456 006e 9BB2     	 uxth r3,r3
+ 457 0070 2344     	 add r3,r3,r4
+ 458 0072 BB60     	 str r3,[r7,#8]
+ 199:../SSC/Src/XMC_ESC.c ****                 // we increment the expected output size depending on the mapped Entry
+ 200:../SSC/Src/XMC_ESC.c ****                 OutputSize += (UINT16) ((*pPDOEntry) & 0xFF);
+ 459              	 .loc 1 200 0 discriminator 3
+ 460 0074 BB68     	 ldr r3,[r7,#8]
+ 461 0076 1B68     	 ldr r3,[r3]
+ 462 0078 9BB2     	 uxth r3,r3
+ 463 007a DBB2     	 uxtb r3,r3
+ 464 007c 9AB2     	 uxth r2,r3
+ 465 007e 7B8B     	 ldrh r3,[r7,#26]
+ 466 0080 1344     	 add r3,r3,r2
+ 467 0082 7B83     	 strh r3,[r7,#26]
+ 196:../SSC/Src/XMC_ESC.c ****             {
+ 468              	 .loc 1 196 0 discriminator 3
+ 469 0084 FB8A     	 ldrh r3,[r7,#22]
+ 470 0086 0133     	 adds r3,r3,#1
+ 471 0088 FB82     	 strh r3,[r7,#22]
+ 472              	.L17:
+ 196:../SSC/Src/XMC_ESC.c ****             {
+ 473              	 .loc 1 196 0 is_stmt 0 discriminator 1
+ 474 008a FA8A     	 ldrh r2,[r7,#22]
+ 475 008c FB89     	 ldrh r3,[r7,#14]
+ 476 008e 9A42     	 cmp r2,r3
+ 477 0090 E1D3     	 bcc .L18
+ 478 0092 04E0     	 b .L30
+ 479              	.L16:
+ 201:../SSC/Src/XMC_ESC.c ****             }
+ 202:../SSC/Src/XMC_ESC.c ****         }
+ 203:../SSC/Src/XMC_ESC.c ****         else
+ 204:../SSC/Src/XMC_ESC.c ****         {
+ 205:../SSC/Src/XMC_ESC.c ****             /*assigned PDO was not found in object dictionary. return invalid mapping*/
+ 206:../SSC/Src/XMC_ESC.c ****             OutputSize = 0;
+ 480              	 .loc 1 206 0 is_stmt 1
+ 481 0094 0023     	 movs r3,#0
+ 482 0096 7B83     	 strh r3,[r7,#26]
+ 207:../SSC/Src/XMC_ESC.c ****             result = ALSTATUSCODE_INVALIDOUTPUTMAPPING;
+ 483              	 .loc 1 207 0
+ 484 0098 2523     	 movs r3,#37
+ 485 009a FB83     	 strh r3,[r7,#30]
+ 208:../SSC/Src/XMC_ESC.c ****             break;
+ 486              	 .loc 1 208 0
+ 487 009c 07E0     	 b .L20
+ 488              	.L30:
+ 190:../SSC/Src/XMC_ESC.c ****     {
+ 489              	 .loc 1 190 0 discriminator 2
+ 490 009e 3B8B     	 ldrh r3,[r7,#24]
+ 491 00a0 0133     	 adds r3,r3,#1
+ 492 00a2 3B83     	 strh r3,[r7,#24]
+ 493              	.L15:
+ 190:../SSC/Src/XMC_ESC.c ****     {
+ 494              	 .loc 1 190 0 is_stmt 0 discriminator 1
+ 495 00a4 2E4B     	 ldr r3,.L32
+ 496 00a6 1B88     	 ldrh r3,[r3]
+ 497 00a8 3A8B     	 ldrh r2,[r7,#24]
+ 498 00aa 9A42     	 cmp r2,r3
+ 499 00ac C0D3     	 bcc .L21
+ 500              	.L20:
+ 209:../SSC/Src/XMC_ESC.c ****         }
+ 210:../SSC/Src/XMC_ESC.c ****     }
+ 211:../SSC/Src/XMC_ESC.c **** 
+ 212:../SSC/Src/XMC_ESC.c ****     OutputSize = (OutputSize + 7) >> 3;
+ 501              	 .loc 1 212 0 is_stmt 1
+ 502 00ae 7B8B     	 ldrh r3,[r7,#26]
+ 503 00b0 0733     	 adds r3,r3,#7
+ 504 00b2 DB10     	 asrs r3,r3,#3
+ 505 00b4 7B83     	 strh r3,[r7,#26]
+ 213:../SSC/Src/XMC_ESC.c **** 
+ 214:../SSC/Src/XMC_ESC.c ****     if(result == 0)
+ 506              	 .loc 1 214 0
+ 507 00b6 FB8B     	 ldrh r3,[r7,#30]
+ 508 00b8 002B     	 cmp r3,#0
+ 509 00ba 41D1     	 bne .L22
+ 215:../SSC/Src/XMC_ESC.c ****     {
+ 216:../SSC/Src/XMC_ESC.c ****         /*Scan Object 0x1C13 TXPDO assign*/
+ 217:../SSC/Src/XMC_ESC.c ****         for(PDOAssignEntryCnt = 0; PDOAssignEntryCnt < sTxPDOassign.u16SubIndex0; PDOAssignEntryCnt
+ 510              	 .loc 1 217 0
+ 511 00bc 0023     	 movs r3,#0
+ 512 00be 3B83     	 strh r3,[r7,#24]
+ 513 00c0 39E0     	 b .L23
+ 514              	.L28:
+ 218:../SSC/Src/XMC_ESC.c ****         {
+ 219:../SSC/Src/XMC_ESC.c ****             pPDO = OBJ_GetObjectHandle(sTxPDOassign.aEntries[PDOAssignEntryCnt]);
+ 515              	 .loc 1 219 0
+ 516 00c2 3B8B     	 ldrh r3,[r7,#24]
+ 517 00c4 274A     	 ldr r2,.L32+4
+ 518 00c6 5B00     	 lsls r3,r3,#1
+ 519 00c8 1344     	 add r3,r3,r2
+ 520 00ca 5B88     	 ldrh r3,[r3,#2]
+ 521 00cc 1846     	 mov r0,r3
+ 522 00ce FFF7FEFF 	 bl OBJ_GetObjectHandle
+ 523 00d2 3861     	 str r0,[r7,#16]
+ 220:../SSC/Src/XMC_ESC.c ****             if(pPDO != NULL)
+ 524              	 .loc 1 220 0
+ 525 00d4 3B69     	 ldr r3,[r7,#16]
+ 526 00d6 002B     	 cmp r3,#0
+ 527 00d8 25D0     	 beq .L24
+ 221:../SSC/Src/XMC_ESC.c ****             {
+ 222:../SSC/Src/XMC_ESC.c ****                 PDOSubindex0 = *((UINT16 *)pPDO->pVarPtr);
+ 528              	 .loc 1 222 0
+ 529 00da 3B69     	 ldr r3,[r7,#16]
+ 530 00dc 9B69     	 ldr r3,[r3,#24]
+ 531 00de 1B88     	 ldrh r3,[r3]
+ 532 00e0 FB81     	 strh r3,[r7,#14]
+ 223:../SSC/Src/XMC_ESC.c ****                 for(PDOEntryCnt = 0; PDOEntryCnt < PDOSubindex0; PDOEntryCnt++)
+ 533              	 .loc 1 223 0
+ 534 00e2 0023     	 movs r3,#0
+ 535 00e4 FB82     	 strh r3,[r7,#22]
+ 536 00e6 19E0     	 b .L25
+ 537              	.L26:
+ 224:../SSC/Src/XMC_ESC.c ****                 {
+ 225:../SSC/Src/XMC_ESC.c ****                     pPDOEntry = (UINT32 *)((UINT8 *)pPDO->pVarPtr + (OBJ_GetEntryOffset((PDOEntryCn
+ 538              	 .loc 1 225 0 discriminator 3
+ 539 00e8 3B69     	 ldr r3,[r7,#16]
+ 540 00ea 9C69     	 ldr r4,[r3,#24]
+ 541 00ec FB8A     	 ldrh r3,[r7,#22]
+ 542 00ee DBB2     	 uxtb r3,r3
+ 543 00f0 0133     	 adds r3,r3,#1
+ 544 00f2 DBB2     	 uxtb r3,r3
+ 545 00f4 1846     	 mov r0,r3
+ 546 00f6 3969     	 ldr r1,[r7,#16]
+ 547 00f8 FFF7FEFF 	 bl OBJ_GetEntryOffset
+ 548 00fc 0346     	 mov r3,r0
+ 549 00fe DB08     	 lsrs r3,r3,#3
+ 550 0100 9BB2     	 uxth r3,r3
+ 551 0102 2344     	 add r3,r3,r4
+ 552 0104 BB60     	 str r3,[r7,#8]
+ 226:../SSC/Src/XMC_ESC.c ****                     // we increment the expected output size depending on the mapped Entry
+ 227:../SSC/Src/XMC_ESC.c ****                     InputSize += (UINT16) ((*pPDOEntry) & 0xFF);
+ 553              	 .loc 1 227 0 discriminator 3
+ 554 0106 BB68     	 ldr r3,[r7,#8]
+ 555 0108 1B68     	 ldr r3,[r3]
+ 556 010a 9BB2     	 uxth r3,r3
+ 557 010c DBB2     	 uxtb r3,r3
+ 558 010e 9AB2     	 uxth r2,r3
+ 559 0110 BB8B     	 ldrh r3,[r7,#28]
+ 560 0112 1344     	 add r3,r3,r2
+ 561 0114 BB83     	 strh r3,[r7,#28]
+ 223:../SSC/Src/XMC_ESC.c ****                 {
+ 562              	 .loc 1 223 0 discriminator 3
+ 563 0116 FB8A     	 ldrh r3,[r7,#22]
+ 564 0118 0133     	 adds r3,r3,#1
+ 565 011a FB82     	 strh r3,[r7,#22]
+ 566              	.L25:
+ 223:../SSC/Src/XMC_ESC.c ****                 {
+ 567              	 .loc 1 223 0 is_stmt 0 discriminator 1
+ 568 011c FA8A     	 ldrh r2,[r7,#22]
+ 569 011e FB89     	 ldrh r3,[r7,#14]
+ 570 0120 9A42     	 cmp r2,r3
+ 571 0122 E1D3     	 bcc .L26
+ 572 0124 04E0     	 b .L31
+ 573              	.L24:
+ 228:../SSC/Src/XMC_ESC.c ****                 }
+ 229:../SSC/Src/XMC_ESC.c ****             }
+ 230:../SSC/Src/XMC_ESC.c ****             else
+ 231:../SSC/Src/XMC_ESC.c ****             {
+ 232:../SSC/Src/XMC_ESC.c ****                 /*assigned PDO was not found in object dictionary. return invalid mapping*/
+ 233:../SSC/Src/XMC_ESC.c ****                 InputSize = 0;
+ 574              	 .loc 1 233 0 is_stmt 1
+ 575 0126 0023     	 movs r3,#0
+ 576 0128 BB83     	 strh r3,[r7,#28]
+ 234:../SSC/Src/XMC_ESC.c ****                 result = ALSTATUSCODE_INVALIDINPUTMAPPING;
+ 577              	 .loc 1 234 0
+ 578 012a 2423     	 movs r3,#36
+ 579 012c FB83     	 strh r3,[r7,#30]
+ 235:../SSC/Src/XMC_ESC.c ****                 break;
+ 580              	 .loc 1 235 0
+ 581 012e 07E0     	 b .L22
+ 582              	.L31:
+ 217:../SSC/Src/XMC_ESC.c ****         {
+ 583              	 .loc 1 217 0 discriminator 2
+ 584 0130 3B8B     	 ldrh r3,[r7,#24]
+ 585 0132 0133     	 adds r3,r3,#1
+ 586 0134 3B83     	 strh r3,[r7,#24]
+ 587              	.L23:
+ 217:../SSC/Src/XMC_ESC.c ****         {
+ 588              	 .loc 1 217 0 is_stmt 0 discriminator 1
+ 589 0136 0B4B     	 ldr r3,.L32+4
+ 590 0138 1B88     	 ldrh r3,[r3]
+ 591 013a 3A8B     	 ldrh r2,[r7,#24]
+ 592 013c 9A42     	 cmp r2,r3
+ 593 013e C0D3     	 bcc .L28
+ 594              	.L22:
+ 236:../SSC/Src/XMC_ESC.c ****             }
+ 237:../SSC/Src/XMC_ESC.c ****         }
+ 238:../SSC/Src/XMC_ESC.c ****     }
+ 239:../SSC/Src/XMC_ESC.c ****     InputSize = (InputSize + 7) >> 3;
+ 595              	 .loc 1 239 0 is_stmt 1
+ 596 0140 BB8B     	 ldrh r3,[r7,#28]
+ 597 0142 0733     	 adds r3,r3,#7
+ 598 0144 DB10     	 asrs r3,r3,#3
+ 599 0146 BB83     	 strh r3,[r7,#28]
+ 240:../SSC/Src/XMC_ESC.c **** 
+ 241:../SSC/Src/XMC_ESC.c **** #else
+ 242:../SSC/Src/XMC_ESC.c **** #if _WIN32
+ 243:../SSC/Src/XMC_ESC.c ****    #pragma message ("Warning: Define 'InputSize' and 'OutputSize'.")
+ 244:../SSC/Src/XMC_ESC.c **** #else
+ 245:../SSC/Src/XMC_ESC.c ****     #warning "Define 'InputSize' and 'OutputSize'."
+ 246:../SSC/Src/XMC_ESC.c **** #endif
+ 247:../SSC/Src/XMC_ESC.c **** #endif
+ 248:../SSC/Src/XMC_ESC.c **** 
+ 249:../SSC/Src/XMC_ESC.c ****     *pInputSize = InputSize;
+ 600              	 .loc 1 249 0
+ 601 0148 7B68     	 ldr r3,[r7,#4]
+ 602 014a BA8B     	 ldrh r2,[r7,#28]
+ 603 014c 1A80     	 strh r2,[r3]
+ 250:../SSC/Src/XMC_ESC.c ****     *pOutputSize = OutputSize;
+ 604              	 .loc 1 250 0
+ 605 014e 3B68     	 ldr r3,[r7]
+ 606 0150 7A8B     	 ldrh r2,[r7,#26]
+ 607 0152 1A80     	 strh r2,[r3]
+ 251:../SSC/Src/XMC_ESC.c ****     return result;
+ 608              	 .loc 1 251 0
+ 609 0154 FB8B     	 ldrh r3,[r7,#30]
+ 252:../SSC/Src/XMC_ESC.c **** }
+ 610              	 .loc 1 252 0
+ 611 0156 1846     	 mov r0,r3
+ 612 0158 2437     	 adds r7,r7,#36
+ 613              	.LCFI35:
+ 614              	 .cfi_def_cfa_offset 12
+ 615 015a BD46     	 mov sp,r7
+ 616              	.LCFI36:
+ 617              	 .cfi_def_cfa_register 13
+ 618              	 
+ 619 015c 90BD     	 pop {r4,r7,pc}
+ 620              	.L33:
+ 621 015e 00BF     	 .align 2
+ 622              	.L32:
+ 623 0160 00000000 	 .word sRxPDOassign
+ 624 0164 00000000 	 .word sTxPDOassign
+ 625              	 .cfi_endproc
+ 626              	.LFE179:
+ 628              	 .section .text.APPL_InputMapping,"ax",%progbits
+ 629              	 .align 2
+ 630              	 .global APPL_InputMapping
+ 631              	 .thumb
+ 632              	 .thumb_func
+ 634              	APPL_InputMapping:
+ 635              	.LFB180:
+ 253:../SSC/Src/XMC_ESC.c **** 
+ 254:../SSC/Src/XMC_ESC.c **** /////////////////////////////////////////////////////////////////////////////////////////
+ 255:../SSC/Src/XMC_ESC.c **** /**
+ 256:../SSC/Src/XMC_ESC.c **** \param      pData  pointer to input process data
+ 257:../SSC/Src/XMC_ESC.c **** 
+ 258:../SSC/Src/XMC_ESC.c **** \brief      This function will copies the inputs from the local memory to the ESC memory
+ 259:../SSC/Src/XMC_ESC.c ****             to the hardware
+ 260:../SSC/Src/XMC_ESC.c **** *////////////////////////////////////////////////////////////////////////////////////////
+ 261:../SSC/Src/XMC_ESC.c **** void APPL_InputMapping(UINT16* pData)
+ 262:../SSC/Src/XMC_ESC.c **** {
+ 636              	 .loc 1 262 0
+ 637              	 .cfi_startproc
+ 638              	 
+ 639              	 
+ 640 0000 80B5     	 push {r7,lr}
+ 641              	.LCFI37:
+ 642              	 .cfi_def_cfa_offset 8
+ 643              	 .cfi_offset 7,-8
+ 644              	 .cfi_offset 14,-4
+ 645 0002 82B0     	 sub sp,sp,#8
+ 646              	.LCFI38:
+ 647              	 .cfi_def_cfa_offset 16
+ 648 0004 00AF     	 add r7,sp,#0
+ 649              	.LCFI39:
+ 650              	 .cfi_def_cfa_register 7
+ 651 0006 7860     	 str r0,[r7,#4]
+ 263:../SSC/Src/XMC_ESC.c **** #if _WIN32
+ 264:../SSC/Src/XMC_ESC.c ****    #pragma message ("Warning: Implement input (Slave -> Master) mapping")
+ 265:../SSC/Src/XMC_ESC.c **** #else
+ 266:../SSC/Src/XMC_ESC.c **** 	  memcpy(pData, &(((UINT16 *)&IN_GENERIC0x6000)[1]), SIZEOF(IN_GENERIC0x6000)-2);
+ 652              	 .loc 1 266 0
+ 653 0008 7868     	 ldr r0,[r7,#4]
+ 654 000a 0349     	 ldr r1,.L35
+ 655 000c 0A22     	 movs r2,#10
+ 656 000e FFF7FEFF 	 bl memcpy
+ 267:../SSC/Src/XMC_ESC.c **** #endif
+ 268:../SSC/Src/XMC_ESC.c **** }
+ 657              	 .loc 1 268 0
+ 658 0012 0837     	 adds r7,r7,#8
+ 659              	.LCFI40:
+ 660              	 .cfi_def_cfa_offset 8
+ 661 0014 BD46     	 mov sp,r7
+ 662              	.LCFI41:
+ 663              	 .cfi_def_cfa_register 13
+ 664              	 
+ 665 0016 80BD     	 pop {r7,pc}
+ 666              	.L36:
+ 667              	 .align 2
+ 668              	.L35:
+ 669 0018 02000000 	 .word IN_GENERIC0x6000+2
+ 670              	 .cfi_endproc
+ 671              	.LFE180:
+ 673              	 .section .text.APPL_OutputMapping,"ax",%progbits
+ 674              	 .align 2
+ 675              	 .global APPL_OutputMapping
+ 676              	 .thumb
+ 677              	 .thumb_func
+ 679              	APPL_OutputMapping:
+ 680              	.LFB181:
+ 269:../SSC/Src/XMC_ESC.c **** 
+ 270:../SSC/Src/XMC_ESC.c **** /////////////////////////////////////////////////////////////////////////////////////////
+ 271:../SSC/Src/XMC_ESC.c **** /**
+ 272:../SSC/Src/XMC_ESC.c **** \param      pData  pointer to output process data
+ 273:../SSC/Src/XMC_ESC.c **** 
+ 274:../SSC/Src/XMC_ESC.c **** \brief    This function will copies the outputs from the ESC memory to the local memory
+ 275:../SSC/Src/XMC_ESC.c ****             to the hardware
+ 276:../SSC/Src/XMC_ESC.c **** *////////////////////////////////////////////////////////////////////////////////////////
+ 277:../SSC/Src/XMC_ESC.c **** void APPL_OutputMapping(UINT16* pData)
+ 278:../SSC/Src/XMC_ESC.c **** {
+ 681              	 .loc 1 278 0
+ 682              	 .cfi_startproc
+ 683              	 
+ 684              	 
+ 685 0000 80B5     	 push {r7,lr}
+ 686              	.LCFI42:
+ 687              	 .cfi_def_cfa_offset 8
+ 688              	 .cfi_offset 7,-8
+ 689              	 .cfi_offset 14,-4
+ 690 0002 82B0     	 sub sp,sp,#8
+ 691              	.LCFI43:
+ 692              	 .cfi_def_cfa_offset 16
+ 693 0004 00AF     	 add r7,sp,#0
+ 694              	.LCFI44:
+ 695              	 .cfi_def_cfa_register 7
+ 696 0006 7860     	 str r0,[r7,#4]
+ 279:../SSC/Src/XMC_ESC.c **** #if _WIN32
+ 280:../SSC/Src/XMC_ESC.c ****    #pragma message ("Warning: Implement output (Master -> Slave) mapping")
+ 281:../SSC/Src/XMC_ESC.c **** #else
+ 282:../SSC/Src/XMC_ESC.c **** 	  memcpy(&(((UINT16 *)&OUT_GENERIC0x7000)[1]), pData, SIZEOF(OUT_GENERIC0x7000)-2);
+ 697              	 .loc 1 282 0
+ 698 0008 0348     	 ldr r0,.L38
+ 699 000a 7968     	 ldr r1,[r7,#4]
+ 700 000c 0A22     	 movs r2,#10
+ 701 000e FFF7FEFF 	 bl memcpy
+ 283:../SSC/Src/XMC_ESC.c **** #endif
+ 284:../SSC/Src/XMC_ESC.c **** }
+ 702              	 .loc 1 284 0
+ 703 0012 0837     	 adds r7,r7,#8
+ 704              	.LCFI45:
+ 705              	 .cfi_def_cfa_offset 8
+ 706 0014 BD46     	 mov sp,r7
+ 707              	.LCFI46:
+ 708              	 .cfi_def_cfa_register 13
+ 709              	 
+ 710 0016 80BD     	 pop {r7,pc}
+ 711              	.L39:
+ 712              	 .align 2
+ 713              	.L38:
+ 714 0018 02000000 	 .word OUT_GENERIC0x7000+2
+ 715              	 .cfi_endproc
+ 716              	.LFE181:
+ 718              	 .section .text.APPL_Application,"ax",%progbits
+ 719              	 .align 2
+ 720              	 .global APPL_Application
+ 721              	 .thumb
+ 722              	 .thumb_func
+ 724              	APPL_Application:
+ 725              	.LFB182:
+ 285:../SSC/Src/XMC_ESC.c **** 
+ 286:../SSC/Src/XMC_ESC.c **** /////////////////////////////////////////////////////////////////////////////////////////
+ 287:../SSC/Src/XMC_ESC.c **** /**
+ 288:../SSC/Src/XMC_ESC.c **** \brief    This function will called from the synchronisation ISR 
+ 289:../SSC/Src/XMC_ESC.c ****             or from the mainloop if no synchronisation is supported
+ 290:../SSC/Src/XMC_ESC.c **** *////////////////////////////////////////////////////////////////////////////////////////
+ 291:../SSC/Src/XMC_ESC.c **** void process_app(TOBJ7000 *OUT_GENERIC, TOBJ6000 *IN_GENERIC);
+ 292:../SSC/Src/XMC_ESC.c **** void APPL_Application(void)
+ 293:../SSC/Src/XMC_ESC.c **** {
+ 726              	 .loc 1 293 0
+ 727              	 .cfi_startproc
+ 728              	 
+ 729              	 
+ 730 0000 80B5     	 push {r7,lr}
+ 731              	.LCFI47:
+ 732              	 .cfi_def_cfa_offset 8
+ 733              	 .cfi_offset 7,-8
+ 734              	 .cfi_offset 14,-4
+ 735 0002 00AF     	 add r7,sp,#0
+ 736              	.LCFI48:
+ 737              	 .cfi_def_cfa_register 7
+ 294:../SSC/Src/XMC_ESC.c **** #if _WIN32
+ 295:../SSC/Src/XMC_ESC.c ****    #pragma message ("Warning: Implement the slave application")
+ 296:../SSC/Src/XMC_ESC.c **** #else
+ 297:../SSC/Src/XMC_ESC.c **** 	process_app(&OUT_GENERIC0x7000, &IN_GENERIC0x6000);
+ 738              	 .loc 1 297 0
+ 739 0004 0248     	 ldr r0,.L41
+ 740 0006 0349     	 ldr r1,.L41+4
+ 741 0008 FFF7FEFF 	 bl process_app
+ 298:../SSC/Src/XMC_ESC.c **** #endif
+ 299:../SSC/Src/XMC_ESC.c **** }
+ 742              	 .loc 1 299 0
+ 743 000c 80BD     	 pop {r7,pc}
+ 744              	.L42:
+ 745 000e 00BF     	 .align 2
+ 746              	.L41:
+ 747 0010 00000000 	 .word OUT_GENERIC0x7000
+ 748 0014 00000000 	 .word IN_GENERIC0x6000
+ 749              	 .cfi_endproc
+ 750              	.LFE182:
+ 752              	 .text
+ 753              	.Letext0:
+ 754              	 .file 2 "c:\\davev4-64bit\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 755              	 .file 3 "c:\\davev4-64bit\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+ 756              	 .file 4 "../SSC/Src/sdoserv.h"
+ 757              	 .file 5 "../SSC/Src/objdef.h"
+ 758              	 .file 6 "../SSC/Src/XMC_ESCObjects.h"
+ 759              	 .file 7 "E:/\261\270\267\335\316\304\274\376/workplace/XMC4300_Relax_EtherCat_APP_Slave_SSC/Libraries/CMSIS/Include/core_cm4.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 XMC_ESC.c
+    {standard input}:24     .data.OUT_GENERICProcessDataMapping0x1600:00000000 OUT_GENERICProcessDataMapping0x1600
+    {standard input}:21     .data.OUT_GENERICProcessDataMapping0x1600:00000000 $d
+    {standard input}:44     .data.IN_GENERICProcessDataMapping0x1A00:00000000 IN_GENERICProcessDataMapping0x1A00
+    {standard input}:41     .data.IN_GENERICProcessDataMapping0x1A00:00000000 $d
+    {standard input}:64     .data.sRxPDOassign:00000000 sRxPDOassign
+    {standard input}:61     .data.sRxPDOassign:00000000 $d
+    {standard input}:72     .data.sTxPDOassign:00000000 sTxPDOassign
+    {standard input}:69     .data.sTxPDOassign:00000000 $d
+    {standard input}:80     .data.IN_GENERIC0x6000:00000000 IN_GENERIC0x6000
+    {standard input}:77     .data.IN_GENERIC0x6000:00000000 $d
+    {standard input}:93     .data.OUT_GENERIC0x7000:00000000 OUT_GENERIC0x7000
+    {standard input}:90     .data.OUT_GENERIC0x7000:00000000 $d
+    {standard input}:102    .text.APPL_AckErrorInd:00000000 $t
+    {standard input}:107    .text.APPL_AckErrorInd:00000000 APPL_AckErrorInd
+    {standard input}:144    .text.APPL_StartMailboxHandler:00000000 $t
+    {standard input}:149    .text.APPL_StartMailboxHandler:00000000 APPL_StartMailboxHandler
+    {standard input}:180    .text.APPL_StopMailboxHandler:00000000 $t
+    {standard input}:185    .text.APPL_StopMailboxHandler:00000000 APPL_StopMailboxHandler
+    {standard input}:216    .text.APPL_StartInputHandler:00000000 $t
+    {standard input}:221    .text.APPL_StartInputHandler:00000000 APPL_StartInputHandler
+    {standard input}:259    .text.APPL_StopInputHandler:00000000 $t
+    {standard input}:264    .text.APPL_StopInputHandler:00000000 APPL_StopInputHandler
+    {standard input}:295    .text.APPL_StartOutputHandler:00000000 $t
+    {standard input}:300    .text.APPL_StartOutputHandler:00000000 APPL_StartOutputHandler
+    {standard input}:331    .text.APPL_StopOutputHandler:00000000 $t
+    {standard input}:336    .text.APPL_StopOutputHandler:00000000 APPL_StopOutputHandler
+    {standard input}:367    .text.APPL_GenerateMapping:00000000 $t
+    {standard input}:372    .text.APPL_GenerateMapping:00000000 APPL_GenerateMapping
+    {standard input}:623    .text.APPL_GenerateMapping:00000160 $d
+    {standard input}:629    .text.APPL_InputMapping:00000000 $t
+    {standard input}:634    .text.APPL_InputMapping:00000000 APPL_InputMapping
+    {standard input}:669    .text.APPL_InputMapping:00000018 $d
+    {standard input}:674    .text.APPL_OutputMapping:00000000 $t
+    {standard input}:679    .text.APPL_OutputMapping:00000000 APPL_OutputMapping
+    {standard input}:714    .text.APPL_OutputMapping:00000018 $d
+    {standard input}:719    .text.APPL_Application:00000000 $t
+    {standard input}:724    .text.APPL_Application:00000000 APPL_Application
+    {standard input}:747    .text.APPL_Application:00000010 $d
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+OBJ_GetObjectHandle
+OBJ_GetEntryOffset
+memcpy
+process_app

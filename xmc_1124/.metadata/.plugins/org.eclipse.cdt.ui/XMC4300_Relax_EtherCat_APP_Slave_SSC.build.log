@@ -1,0 +1,11 @@
+09:53:23 **** Incremental Build of configuration Debug for project XMC4300_Relax_EtherCat_APP_Slave_SSC ****
+"\"C:\\DAVEv4-64Bit\\DAVE-4.3.2\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j2 all 
+'Invoking: ARM-GCC Print Size'
+"C:/DAVEv4-64Bit/DAVE-4.3.2/eclipse/ARM-GCC-49/bin/arm-none-eabi-size" --format=berkeley "XMC4300_Relax_EtherCat_APP_Slave_SSC.elf"
+   text	   data	    bss	    dec	    hex	filename
+  36156	   3172	   7344	  46672	   b650	XMC4300_Relax_EtherCat_APP_Slave_SSC.elf
+'Finished building: XMC4300_Relax_EtherCat_APP_Slave_SSC.siz'
+
+
+09:53:24 Build Finished (took 1s.326ms)
+

@@ -1,0 +1,1405 @@
+!SESSION 2017-11-24 08:31:09.233 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CN
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY org.eclipse.core.variables 4 120 2017-11-24 08:31:38.725
+!MESSAGE Contributed variable extension from bundle 'ilg.gnuarmeclipse.debug.gdbjtag.mikroe' overrides existing extension variable 'jlink_path' from  bundle 'ilg.gnuarmeclipse.debug.gdbjtag.jlink'
+
+!ENTRY org.eclipse.core.variables 4 120 2017-11-24 08:31:38.728
+!MESSAGE Contributed variable extension from bundle 'ilg.gnuarmeclipse.debug.gdbjtag.mikroe' overrides existing extension variable 'jlink_gdbserver' from  bundle 'ilg.gnuarmeclipse.debug.gdbjtag.jlink'
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-11-24 08:31:44.501
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-11-24 08:31:44.501
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\LinYX'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY SOLVER 1 0 2017-11-24 08:31:44.962
+!MESSAGE USER_ACTION : Default solver exe path is: C:\DAVEv4-64Bit\DAVE-4.3.2\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2017-11-24 08:31:45.856
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2017-11-24 08:31:45.856
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2017-11-24 08:31:46.056
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-11-24 08:31:49.567
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.3/CE/content.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:113)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-11-24 08:31:49.633
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.1/ARM-GCC-Update/site.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.getDecompressedStream(UrlConnectionRetrieveFileTransfer.java:552)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.openStreams(UrlConnectionRetrieveFileTransfer.java:322)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:322)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadActualSiteFile(UpdateSite.java:205)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.load(UpdateSite.java:147)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:99)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:59)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:151)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:129)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:73)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-11-24 08:31:49.650
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.3/Debugger/content.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:113)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-11-24 08:31:49.653
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.3/MikroE/Debugger/content.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:113)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-11-24 08:31:49.661
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.1/Solver_emWin_update/site.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.getDecompressedStream(UrlConnectionRetrieveFileTransfer.java:552)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.openStreams(UrlConnectionRetrieveFileTransfer.java:322)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:322)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadActualSiteFile(UpdateSite.java:205)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.load(UpdateSite.java:147)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:99)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:59)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:151)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:129)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:73)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-11-24 08:31:49.663
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.3/MikroE/BMI/content.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:113)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2017-11-24 08:31:50.842
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2017-11-24 08:31:50.848
+!MESSAGE ConnectionException:
+:http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2017-11-24 08:31:50.849
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2017-11-24 08:31:50.849
+!MESSAGE ConnectionException:
+:http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2017-11-24 08:31:50.850
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2017-11-24 08:31:50.851
+!MESSAGE ConnectionException:
+:http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.1//daveSite.xml
+
+!ENTRY com.dave.mbs.common 1 0 2017-11-24 08:32:17.297
+!MESSAGE Resource '/XMC4300_Relax_EtherCat_APP_Slave_SSC' is not open.
+
+!ENTRY Import 1 0 2017-11-24 08:32:17.537
+!MESSAGE USER_ACTION : Time taken for importing project: XMC4300_Relax_EtherCat_APP_Slave_SSC into workspace is : 6453 msec 
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-11-24 08:32:36.449
+!MESSAGE Indexed 'XMC4300_Relax_EtherCat_APP_Slave_SSC' (54 sources, 116 headers) in 15.9 sec: 13,600 declarations; 32,518 references; 5 unresolved inclusions; 0 syntax errors; 81 unresolved names (0.18%)
+
+!ENTRY com.dave.mbs.common 1 0 2017-11-24 08:32:38.270
+!MESSAGE Resource '/XMC4300_Relax_EtherCat_APP_Slave_SSC' is not open.
+
+!ENTRY APPSTORE 1 0 2017-11-24 08:32:39.703
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC4.3.00.F100.ALL] is: 851 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-24 08:32:39.731
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 5 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-24 08:32:40.650
+!MESSAGE USER_ACTION : Active project:XMC4300_Relax_EtherCat_APP_Slave_SSC[ Software ID:XMC4.3.00.F100.ALL]
+
+!ENTRY COMMON 1 0 2017-11-24 08:32:46.618
+!MESSAGE Time Taken By De-Serialization  : 4004 ms :: E:\xmc_1124\XMC4300_Relax_EtherCat_APP_Slave_SSC\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2017-11-24 08:32:46.630
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-24 08:32:47.300
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 6650 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-24 08:32:47.352
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 49 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-24 08:32:47.379
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 27 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-24 08:32:47.381
+!MESSAGE USER_ACTION : Time taken for updating views is: 1 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-24 08:32:51.825
+!MESSAGE USER_ACTION : Time taken for rendering views is: 4443 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-24 08:32:53.728
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 14002 msec 
+!SESSION 2017-11-24 09:26:12.991 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CN
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-11-24 09:26:23.404
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.variables 4 120 2017-11-24 09:26:41.383
+!MESSAGE Contributed variable extension from bundle 'ilg.gnuarmeclipse.debug.gdbjtag.mikroe' overrides existing extension variable 'jlink_path' from  bundle 'ilg.gnuarmeclipse.debug.gdbjtag.jlink'
+
+!ENTRY org.eclipse.core.variables 4 120 2017-11-24 09:26:41.396
+!MESSAGE Contributed variable extension from bundle 'ilg.gnuarmeclipse.debug.gdbjtag.mikroe' overrides existing extension variable 'jlink_gdbserver' from  bundle 'ilg.gnuarmeclipse.debug.gdbjtag.jlink'
+
+!ENTRY SOLVER 1 0 2017-11-24 09:26:43.117
+!MESSAGE USER_ACTION : Default solver exe path is: C:\DAVEv4-64Bit\DAVE-4.3.2\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2017-11-24 09:26:43.287
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2017-11-24 09:26:43.287
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2017-11-24 09:26:43.992
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-11-24 09:26:51.256
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-11-24 09:26:51.263
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\LinYX'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY APPSTORE 1 0 2017-11-24 09:26:56.689
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC4.3.00.F100.ALL] is: 3149 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-24 09:26:56.898
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 6 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-24 09:26:57.221
+!MESSAGE USER_ACTION : Active project:XMC4300_Relax_EtherCat_APP_Slave_SSC[ Software ID:XMC4.3.00.F100.ALL]
+
+!ENTRY COMMON 1 0 2017-11-24 09:27:03.902
+!MESSAGE Time Taken By De-Serialization  : 3663 ms :: E:\xmc_1124\XMC4300_Relax_EtherCat_APP_Slave_SSC\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2017-11-24 09:27:03.941
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-24 09:27:04.868
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 7648 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-24 09:27:04.933
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 44 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-24 09:27:05.056
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 122 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-24 09:27:05.057
+!MESSAGE USER_ACTION : Time taken for updating views is: 1 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-24 09:27:09.320
+!MESSAGE USER_ACTION : Time taken for rendering views is: 4263 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-24 09:27:10.707
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 13815 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-24 09:27:14.443
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2017-11-24 09:27:14.730
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2017-11-24 09:27:14.809
+!MESSAGE ConnectionException:
+:http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2017-11-24 09:27:14.815
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2017-11-24 09:27:14.819
+!MESSAGE ConnectionException:
+:http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2017-11-24 09:27:14.820
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2017-11-24 09:27:14.820
+!MESSAGE ConnectionException:
+:http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.1//daveSite.xml
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-11-24 09:27:14.843
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.3/CE/content.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:113)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-11-24 09:27:14.981
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.1/ARM-GCC-Update/site.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.getDecompressedStream(UrlConnectionRetrieveFileTransfer.java:552)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.openStreams(UrlConnectionRetrieveFileTransfer.java:322)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:322)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadActualSiteFile(UpdateSite.java:205)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.load(UpdateSite.java:147)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:99)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:59)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:151)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:129)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:73)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-11-24 09:27:14.997
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.3/Debugger/content.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:113)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-11-24 09:27:15.000
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.3/MikroE/Debugger/content.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:113)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-11-24 09:27:15.019
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.1/Solver_emWin_update/site.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.getDecompressedStream(UrlConnectionRetrieveFileTransfer.java:552)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.openStreams(UrlConnectionRetrieveFileTransfer.java:322)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:322)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadActualSiteFile(UpdateSite.java:205)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.load(UpdateSite.java:147)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:99)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:59)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:151)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:129)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:73)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-11-24 09:27:15.032
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.3/MikroE/BMI/content.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:113)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.dave.mbs.common 1 0 2017-11-24 10:02:02.906
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2017-11-24 10:02:03.219
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2017-11-24 10:02:04.689
+!MESSAGE Time Taken By Serialization  : 1469 ms :: E:\xmc_1124\XMC4300_Relax_EtherCat_APP_Slave_SSC\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2017-11-24 10:02:05.280
+!MESSAGE ****************Cleaning project data:XMC4300_Relax_EtherCat_APP_Slave_SSC*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-24 10:02:05.568
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 838 msec 
+
+!ENTRY SOLVER 1 0 2017-11-24 10:02:05.569
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2017-11-24 10:02:05.822
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+!SESSION 2017-11-27 14:16:30.933 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CN
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY org.eclipse.core.variables 4 120 2017-11-27 14:16:40.410
+!MESSAGE Contributed variable extension from bundle 'ilg.gnuarmeclipse.debug.gdbjtag.mikroe' overrides existing extension variable 'jlink_path' from  bundle 'ilg.gnuarmeclipse.debug.gdbjtag.jlink'
+
+!ENTRY org.eclipse.core.variables 4 120 2017-11-27 14:16:40.416
+!MESSAGE Contributed variable extension from bundle 'ilg.gnuarmeclipse.debug.gdbjtag.mikroe' overrides existing extension variable 'jlink_gdbserver' from  bundle 'ilg.gnuarmeclipse.debug.gdbjtag.jlink'
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-11-27 14:16:43.455
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-11-27 14:16:43.455
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\LinYX'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY SOLVER 1 0 2017-11-27 14:16:43.753
+!MESSAGE USER_ACTION : Default solver exe path is: C:\DAVEv4-64Bit\DAVE-4.3.2\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2017-11-27 14:16:43.862
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2017-11-27 14:16:43.862
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2017-11-27 14:16:44.334
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPSTORE 1 0 2017-11-27 14:16:44.858
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC4.3.00.F100.ALL] is: 520 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-27 14:16:44.909
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 4 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-27 14:16:45.277
+!MESSAGE USER_ACTION : Active project:XMC4300_Relax_EtherCat_APP_Slave_SSC[ Software ID:XMC4.3.00.F100.ALL]
+
+!ENTRY COMMON 1 0 2017-11-27 14:16:46.889
+!MESSAGE Time Taken By De-Serialization  : 781 ms :: E:\xmc_1124\XMC4300_Relax_EtherCat_APP_Slave_SSC\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2017-11-27 14:16:46.895
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-27 14:16:47.124
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 1849 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-27 14:16:47.142
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 15 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-27 14:16:47.169
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 26 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-27 14:16:47.170
+!MESSAGE USER_ACTION : Time taken for updating views is: 1 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-27 14:16:48.539
+!MESSAGE USER_ACTION : Time taken for rendering views is: 1369 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-27 14:16:48.973
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 4069 msec 
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-11-27 14:16:49.941
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.3/CE/content.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:113)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-11-27 14:16:49.962
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.1/ARM-GCC-Update/site.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.getDecompressedStream(UrlConnectionRetrieveFileTransfer.java:552)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.openStreams(UrlConnectionRetrieveFileTransfer.java:322)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:322)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadActualSiteFile(UpdateSite.java:205)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.load(UpdateSite.java:147)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:99)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:59)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:151)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:129)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:73)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-11-27 14:16:49.964
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.3/Debugger/content.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:113)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-11-27 14:16:49.966
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.3/MikroE/Debugger/content.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:113)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-11-27 14:16:49.970
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.1/Solver_emWin_update/site.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.getDecompressedStream(UrlConnectionRetrieveFileTransfer.java:552)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.openStreams(UrlConnectionRetrieveFileTransfer.java:322)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:322)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadActualSiteFile(UpdateSite.java:205)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.load(UpdateSite.java:147)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:99)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:59)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:151)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:129)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:73)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-11-27 14:16:49.972
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.3/MikroE/BMI/content.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:113)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2017-11-27 14:16:50.116
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2017-11-27 14:16:50.121
+!MESSAGE ConnectionException:
+:http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2017-11-27 14:16:50.122
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2017-11-27 14:16:50.122
+!MESSAGE ConnectionException:
+:http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2017-11-27 14:16:50.122
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2017-11-27 14:16:50.123
+!MESSAGE ConnectionException:
+:http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.1//daveSite.xml
+
+!ENTRY org.eclipse.core.filesystem 4 271 2017-11-27 14:20:10.517
+!MESSAGE Could not read file: E:\xmc_1124\XMC4300_Relax_EtherCat_APP_Slave_SSC\SSC\~$XMC_ESC.xlsx.
+!STACK 0
+java.io.FileNotFoundException: E:\xmc_1124\XMC4300_Relax_EtherCat_APP_Slave_SSC\SSC\~$XMC_ESC.xlsx (另一个程序正在使用此文件，进程无法访问。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:377)
+	at org.eclipse.core.filesystem.provider.FileStore.copyFile(FileStore.java:220)
+	at org.eclipse.core.filesystem.provider.FileStore.copy(FileStore.java:143)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.copy(LocalFile.java:117)
+	at org.eclipse.core.internal.localstore.BlobStore.addBlob(BlobStore.java:56)
+	at org.eclipse.core.internal.localstore.HistoryStore2.addState(HistoryStore2.java:92)
+	at org.eclipse.core.internal.resources.ResourceTree.addToLocalHistory(ResourceTree.java:70)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFile(ResourceTree.java:284)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFile(ResourceTree.java:785)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1979)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2017-11-27 14:20:10.536
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Contains: Could not delete 'E:\xmc_1124\XMC4300_Relax_EtherCat_APP_Slave_SSC\SSC\~$XMC_ESC.xlsx'.
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:131)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFile(ResourceTree.java:304)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFile(ResourceTree.java:785)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1979)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Contains: Could not delete: E:\xmc_1124\XMC4300_Relax_EtherCat_APP_Slave_SSC\SSC\~$XMC_ESC.xlsx.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2017-11-27 14:20:10.537
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2017-11-27 14:20:10.537
+!MESSAGE Could not delete 'E:\xmc_1124\XMC4300_Relax_EtherCat_APP_Slave_SSC\SSC\~$XMC_ESC.xlsx'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:131)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFile(ResourceTree.java:304)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFile(ResourceTree.java:785)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1979)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:168)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2313)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Contains: Could not delete: E:\xmc_1124\XMC4300_Relax_EtherCat_APP_Slave_SSC\SSC\~$XMC_ESC.xlsx.
+!SUBENTRY 3 org.eclipse.core.filesystem 4 273 2017-11-27 14:20:10.537
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2017-11-27 14:20:10.537
+!MESSAGE Could not delete: E:\xmc_1124\XMC4300_Relax_EtherCat_APP_Slave_SSC\SSC\~$XMC_ESC.xlsx.
+
+!ENTRY org.eclipse.ui 4 4 2017-11-27 14:31:03.690
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.DebugLast: {ActionDelegateHandlerProxy(null,com.dave.activeproject.ui.actions.ActiveProjDebugLastAction)} vs {ActionDelegateHandlerProxy(null,org.eclipse.debug.internal.ui.actions.DebugLastAction)}
+
+!ENTRY com.dave.mbs.common 1 0 2017-11-27 14:39:52.728
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2017-11-27 14:39:52.818
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2017-11-27 14:39:52.948
+!MESSAGE Time Taken By Serialization  : 129 ms :: E:\xmc_1124\XMC4300_Relax_EtherCat_APP_Slave_SSC\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2017-11-27 14:39:53.187
+!MESSAGE ****************Cleaning project data:XMC4300_Relax_EtherCat_APP_Slave_SSC*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2017-11-27 14:39:53.404
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 401 msec 
+
+!ENTRY SOLVER 1 0 2017-11-27 14:39:53.404
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2017-11-27 14:39:53.657
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+!SESSION 2018-01-09 09:44:51.041 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CN
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY org.eclipse.core.variables 4 120 2018-01-09 09:46:27.812
+!MESSAGE Contributed variable extension from bundle 'ilg.gnuarmeclipse.debug.gdbjtag.mikroe' overrides existing extension variable 'jlink_path' from  bundle 'ilg.gnuarmeclipse.debug.gdbjtag.jlink'
+
+!ENTRY org.eclipse.core.variables 4 120 2018-01-09 09:46:27.820
+!MESSAGE Contributed variable extension from bundle 'ilg.gnuarmeclipse.debug.gdbjtag.mikroe' overrides existing extension variable 'jlink_gdbserver' from  bundle 'ilg.gnuarmeclipse.debug.gdbjtag.jlink'
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-01-09 09:46:32.257
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\LinYX'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY SOLVER 1 0 2018-01-09 09:46:33.754
+!MESSAGE USER_ACTION : Default solver exe path is: C:\DAVEv4-64Bit\DAVE-4.3.2\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2018-01-09 09:46:34.127
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2018-01-09 09:46:34.127
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2018-01-09 09:46:35.019
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPSTORE 1 0 2018-01-09 09:46:35.640
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC4.3.00.F100.ALL] is: 619 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-01-09 09:46:36.250
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 5 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-01-09 09:46:36.586
+!MESSAGE USER_ACTION : Active project:XMC4300_Relax_EtherCat_APP_Slave_SSC[ Software ID:XMC4.3.00.F100.ALL]
+
+!ENTRY COMMON 1 0 2018-01-09 09:46:38.647
+!MESSAGE Time Taken By De-Serialization  : 960 ms :: E:\xmc_1124\XMC4300_Relax_EtherCat_APP_Slave_SSC\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2018-01-09 09:46:38.654
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2018-01-09 09:46:38.953
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 2369 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-01-09 09:46:38.987
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 32 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-01-09 09:46:39.014
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 26 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-01-09 09:46:39.015
+!MESSAGE USER_ACTION : Time taken for updating views is: 1 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-01-09 09:46:41.425
+!MESSAGE USER_ACTION : Time taken for rendering views is: 2408 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-01-09 09:46:41.929
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 5683 msec 
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2018-01-09 09:46:43.838
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.3/CE/content.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:113)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2018-01-09 09:46:43.891
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.1/ARM-GCC-Update/site.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.getDecompressedStream(UrlConnectionRetrieveFileTransfer.java:552)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.openStreams(UrlConnectionRetrieveFileTransfer.java:322)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:322)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadActualSiteFile(UpdateSite.java:205)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.load(UpdateSite.java:147)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:99)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:59)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:151)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:129)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:73)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2018-01-09 09:46:43.929
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.3/Debugger/content.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:113)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2018-01-09 09:46:43.933
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.3/MikroE/Debugger/content.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:113)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2018-01-09 09:46:43.937
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.1/Solver_emWin_update/site.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.getDecompressedStream(UrlConnectionRetrieveFileTransfer.java:552)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.openStreams(UrlConnectionRetrieveFileTransfer.java:322)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:885)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:576)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:106)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.sendRetrieveRequest(FileReader.java:389)
+	at org.eclipse.equinox.internal.p2.transport.ecf.FileReader.readInto(FileReader.java:322)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:101)
+	at org.eclipse.equinox.internal.p2.transport.ecf.RepositoryTransport.download(RepositoryTransport.java:156)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadActualSiteFile(UpdateSite.java:205)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.load(UpdateSite.java:147)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.initializeRepository(UpdateSiteMetadataRepositoryFactory.java:99)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:59)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:151)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:129)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:73)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2018-01-09 09:46:43.940
+!MESSAGE Unknown Host: http://dave.infineon.com/Luna/v4.3/MikroE/BMI/content.xml
+!STACK 0
+java.net.UnknownHostException: dave.infineon.com
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.browse.URLFileSystemBrowser.runRequest(URLFileSystemBrowser.java:113)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY APPLICATION_MODEL 1 0 2018-01-09 09:46:44.098
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2018-01-09 09:46:44.148
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2018-01-09 09:46:44.155
+!MESSAGE ConnectionException:
+:http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2018-01-09 09:46:44.156
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2018-01-09 09:46:44.157
+!MESSAGE ConnectionException:
+:http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2018-01-09 09:46:44.157
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2018-01-09 09:46:44.157
+!MESSAGE ConnectionException:
+:http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.1//daveSite.xml
+
+!ENTRY org.eclipse.ui 4 4 2018-01-09 09:49:04.128
+!MESSAGE Conflicting handlers for org.eclipse.debug.ui.commands.DebugLast: {ActionDelegateHandlerProxy(null,org.eclipse.debug.internal.ui.actions.DebugLastAction)} vs {ActionDelegateHandlerProxy(null,com.dave.activeproject.ui.actions.ActiveProjDebugLastAction)}
+
+!ENTRY com.dave.mbs.common 1 0 2018-01-09 09:55:22.604
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2018-01-09 09:55:22.667
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2018-01-09 09:55:22.863
+!MESSAGE Time Taken By Serialization  : 195 ms :: E:\xmc_1124\XMC4300_Relax_EtherCat_APP_Slave_SSC\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2018-01-09 09:55:22.922
+!MESSAGE ****************Cleaning project data:XMC4300_Relax_EtherCat_APP_Slave_SSC*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2018-01-09 09:55:23.277
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 361 msec 
+
+!ENTRY SOLVER 1 0 2018-01-09 09:55:23.277
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2018-01-09 09:55:23.529
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+!SESSION 2018-02-02 09:11:36.130 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CN
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY org.eclipse.core.variables 4 120 2018-02-02 09:15:57.189
+!MESSAGE Contributed variable extension from bundle 'ilg.gnuarmeclipse.debug.gdbjtag.mikroe' overrides existing extension variable 'jlink_path' from  bundle 'ilg.gnuarmeclipse.debug.gdbjtag.jlink'
+
+!ENTRY org.eclipse.core.variables 4 120 2018-02-02 09:15:57.192
+!MESSAGE Contributed variable extension from bundle 'ilg.gnuarmeclipse.debug.gdbjtag.mikroe' overrides existing extension variable 'jlink_gdbserver' from  bundle 'ilg.gnuarmeclipse.debug.gdbjtag.jlink'
+
+!ENTRY SOLVER 1 0 2018-02-02 09:16:05.055
+!MESSAGE USER_ACTION : Default solver exe path is: C:\DAVEv4-64Bit\DAVE-4.3.2\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2018-02-02 09:16:05.216
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2018-02-02 09:16:05.217
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2018-02-02 09:16:05.820
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPSTORE 1 0 2018-02-02 09:16:07.198
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC4.3.00.F100.ALL] is: 650 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-02-02 09:16:07.588
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 4 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-02-02 09:16:08.381
+!MESSAGE USER_ACTION : Active project:XMC4300_Relax_EtherCat_APP_Slave_SSC[ Software ID:XMC4.3.00.F100.ALL]
+
+!ENTRY COMMON 1 0 2018-02-02 09:16:10.406
+!MESSAGE Time Taken By De-Serialization  : 1180 ms :: E:\xmc_1124\XMC4300_Relax_EtherCat_APP_Slave_SSC\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2018-02-02 09:16:10.415
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2018-02-02 09:16:10.634
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 2255 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-02-02 09:16:10.651
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 14 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-02-02 09:16:10.677
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 25 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-02-02 09:16:10.678
+!MESSAGE USER_ACTION : Time taken for updating views is: 1 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-02-02 09:16:13.506
+!MESSAGE USER_ACTION : Time taken for rendering views is: 2828 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-02-02 09:16:14.613
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 7029 msec 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2018-02-02 09:16:17.154
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2018-02-02 09:16:32.135
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2018-02-02 09:16:50.136
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.1//daveSite.xml
+
+!ENTRY com.dave.mbs.common 1 0 2018-02-02 13:04:45.128
+!MESSAGE *************Saving EMF data into file system*******************
+
+!ENTRY com.dave.mbs.common 1 0 2018-02-02 13:04:45.242
+!MESSAGE *************Saving Groovy data into file system*******************
+
+!ENTRY COMMON 1 0 2018-02-02 13:04:45.622
+!MESSAGE Time Taken By Serialization  : 379 ms :: E:\xmc_1124\XMC4300_Relax_EtherCat_APP_Slave_SSC\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2018-02-02 13:04:46.241
+!MESSAGE ****************Cleaning project data:XMC4300_Relax_EtherCat_APP_Slave_SSC*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2018-02-02 13:04:46.391
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 709 msec 
+
+!ENTRY SOLVER 1 0 2018-02-02 13:04:46.392
+!MESSAGE Solver exited (0)
+
+!ENTRY SOLVER 1 0 2018-02-02 13:04:46.646
+!MESSAGE USER_ACTION : Solver Status: DISCONNECTED
+!SESSION 2018-02-06 08:49:13.472 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_66
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_CN
+Framework arguments:  -application com.ifx.davex.product.daveApplication -showlocation
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -application com.ifx.davex.product.daveApplication -showlocation
+
+!ENTRY org.eclipse.core.variables 4 120 2018-02-06 08:49:24.126
+!MESSAGE Contributed variable extension from bundle 'ilg.gnuarmeclipse.debug.gdbjtag.mikroe' overrides existing extension variable 'jlink_path' from  bundle 'ilg.gnuarmeclipse.debug.gdbjtag.jlink'
+
+!ENTRY org.eclipse.core.variables 4 120 2018-02-06 08:49:24.135
+!MESSAGE Contributed variable extension from bundle 'ilg.gnuarmeclipse.debug.gdbjtag.mikroe' overrides existing extension variable 'jlink_gdbserver' from  bundle 'ilg.gnuarmeclipse.debug.gdbjtag.jlink'
+
+!ENTRY SOLVER 1 0 2018-02-06 08:49:29.382
+!MESSAGE USER_ACTION : Default solver exe path is: C:\DAVEv4-64Bit\DAVE-4.3.2\eclipse\Solver\lib\i386_nt\eclipse.exe
+
+!ENTRY SOLVER 1 0 2018-02-06 08:49:29.480
+!MESSAGE USER_ACTION : GlobalSize= 750MB; LocalSize: 128MB
+
+!ENTRY SOLVER 1 0 2018-02-06 08:49:29.480
+!MESSAGE USER_ACTION : Creating OutOfProcessEclipse instance...
+
+!ENTRY SOLVER 1 0 2018-02-06 08:49:30.243
+!MESSAGE USER_ACTION : Solver Status: CONNECTED
+
+!ENTRY APPSTORE 1 0 2018-02-06 08:49:30.812
+!MESSAGE USER_ACTION : Time taken for loading LibraryStore data for SoftwareId [XMC4.3.00.F100.ALL] is: 567 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-02-06 08:49:31.074
+!MESSAGE USER_ACTION : Time taken for disposing objects for memory cleanup: 4 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-02-06 08:49:31.665
+!MESSAGE USER_ACTION : Active project:XMC4300_Relax_EtherCat_APP_Slave_SSC[ Software ID:XMC4.3.00.F100.ALL]
+
+!ENTRY COMMON 1 0 2018-02-06 08:49:33.521
+!MESSAGE Time Taken By De-Serialization  : 892 ms :: E:\xmc_1124\XMC4300_Relax_EtherCat_APP_Slave_SSC\Dave\Model\projectData.bin
+
+!ENTRY com.dave.mbs.common 1 0 2018-02-06 08:49:33.528
+!MESSAGE *************Serializing EMF and Groovy data to RAM*******************
+
+!ENTRY APPLICATION_MODEL 1 0 2018-02-06 08:49:33.746
+!MESSAGE USER_ACTION : Time taken for initializing Application Model is: 2088 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-02-06 08:49:33.779
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(updateQuery): 29 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-02-06 08:49:33.806
+!MESSAGE USER_ACTION : Time taken for reloadLastSolverResult(getSolutionQuery): 26 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-02-06 08:49:33.807
+!MESSAGE USER_ACTION : Time taken for updating views is: 1 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-02-06 08:49:35.313
+!MESSAGE USER_ACTION : Time taken for rendering views is: 1505 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-02-06 08:49:35.731
+!MESSAGE USER_ACTION : Total time taken for setting project as active is: 4661 msec 
+
+!ENTRY APPLICATION_MODEL 1 0 2018-02-06 08:49:37.113
+!MESSAGE Only One DAVE Application is running 
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2018-02-06 08:49:37.184
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2018-02-06 08:50:38.185
+!MESSAGE ConnectionException:
+:http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1/XMC45/DAC_EXAMPLE_XMC45.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2018-02-06 08:50:38.186
+!MESSAGE ConnectionException:
+:http://dave.infineon.com/Libraries/Examples/XMC_IFX/v4.1/XMC45/DAC_EXAMPLE_XMC45.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2018-02-06 08:50:39.084
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/XMC_IFX/v4.1//daveSite.xml
+
+!ENTRY com.ifx.dave.LibraryManager 4 0 2018-02-06 08:50:56.898
+!MESSAGE Reading file: http://dave.infineon.com/Libraries/DAVE_Libs/Contributed/v4.1//daveSite.xml
